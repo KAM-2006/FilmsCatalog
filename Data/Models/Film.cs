@@ -10,5 +10,7 @@
         public string FilmDirector { get; set; }
         public string DateOfCreating { get; set; }
         public double Rating { get; set; }
+        public int GenreID { get; set; }    
+        public Genre Genre { get; set; }    
     }
 }
