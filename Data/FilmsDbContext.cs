@@ -12,7 +12,8 @@
         public DbSet<Film> Films { get; set; }
         public DbSet<Actor> Actors { get; set; }
         public DbSet<FilmActor> FilmsActors { get; set; }
-       
+        public DbSet<Genre> Genres { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
