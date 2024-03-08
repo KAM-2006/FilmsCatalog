@@ -2,6 +2,8 @@
 {
     using Data;
     using Data.Models;
+    using Microsoft.EntityFrameworkCore;
+
     public class FilmController
     {
         private FilmsDbContext filmsDbContext;
@@ -10,7 +12,11 @@
         {
             using (filmsDbContext = new FilmsDbContext())
             {
-                return filmsDbContext.Films.ToList();
+                filmsDbContext.Films
+                    .Include(f => f.FilmsActors)
+                    .ThenInclude(a => a.Actor)
+                    .ToList();
+                return filmsDbContext.Films.Include(g => g.Genre).ToList();
             }
         }
 
@@ -22,23 +28,23 @@
             }
         }
 
-        public void Add(Film project)
+        public void Add(Film film)
         {
             using (filmsDbContext = new FilmsDbContext())
             {
-                filmsDbContext.Films.Add(project);
+                filmsDbContext.Films.Add(film);
                 filmsDbContext.SaveChanges();
             }
         }
 
-        public void Update(Film project)
+        public void Update(Film film)
         {
             using (filmsDbContext = new FilmsDbContext())
             {
-                var item = filmsDbContext.Films.Find(project.Id);
+                var item = filmsDbContext.Films.Find(film.Id);
                 if (item != null)
                 {
-                    filmsDbContext.Entry(item).CurrentValues.SetValues(project);
+                    filmsDbContext.Entry(item).CurrentValues.SetValues(film);
                     filmsDbContext.SaveChanges();
                 }
             }
@@ -48,10 +54,10 @@
         {
             using (filmsDbContext = new FilmsDbContext())
             {
-                var project = filmsDbContext.Films.Find(id);
-                if (project != null)
+                var film = filmsDbContext.Films.Find(id);
+                if (film != null)
                 {
-                    filmsDbContext.Films.Remove(project);
+                    filmsDbContext.Films.Remove(film);
                     filmsDbContext.SaveChanges();
                 }
             }

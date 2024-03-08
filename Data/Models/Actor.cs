@@ -9,13 +9,13 @@
         public string FirstName { get; set; }
         [Required]
         public string LastName { get; set; }
-        public int Year { get; set; }
-        public string DataOfBirth { get; set; }
+        public int Years { get; set; }
+        public string DateOfBirth { get; set; }
         public ICollection<FilmActor> FilmsActors { get; set; }
 
         public override string ToString()
         {
-            return $"{this.FirstName} {this.LastName} {this.Year} {this.DataOfBirth}";
+            return $"{this.FirstName} {this.LastName} {this.Years} {this.DateOfBirth}";
         }
     }
 }

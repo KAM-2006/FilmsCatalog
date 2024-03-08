@@ -15,6 +15,6 @@ namespace Data.Models
         [Required]
         public string Name { get; set; }
 
-         public ICollection<Film> Films { get; set; }
+        public ICollection<Film> Films { get; set; }
     }
 }
