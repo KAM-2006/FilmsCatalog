@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{2F4A0AFF-C5FD-4A5E-B552-CDFFF6DB993C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", "{2F4A0AFF-C5FD-4A5E-B552-CDFFF6DB993C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controller", "Controller\Controller.csproj", "{ACD8B86C-A13B-4F07-ABB1-7A081E057E88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controller", "Controller\Controller.csproj", "{ACD8B86C-A13B-4F07-ABB1-7A081E057E88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsAppFilmsCatalog", "WinFormsAppFilmsCatalog\WinFormsAppFilmsCatalog.csproj", "{AA12DD9D-FF06-418C-8937-6ECC5D975A87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{ACD8B86C-A13B-4F07-ABB1-7A081E057E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACD8B86C-A13B-4F07-ABB1-7A081E057E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACD8B86C-A13B-4F07-ABB1-7A081E057E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA12DD9D-FF06-418C-8937-6ECC5D975A87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA12DD9D-FF06-418C-8937-6ECC5D975A87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA12DD9D-FF06-418C-8937-6ECC5D975A87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA12DD9D-FF06-418C-8937-6ECC5D975A87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
