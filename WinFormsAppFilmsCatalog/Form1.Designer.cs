@@ -56,6 +56,7 @@
             btnInsert.TabIndex = 1;
             btnInsert.Text = "Insert information into database";
             btnInsert.UseVisualStyleBackColor = false;
+            btnInsert.Click += btnInsert_Click;
             // 
             // btnShow
             // 
