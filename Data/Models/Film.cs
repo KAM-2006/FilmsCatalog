@@ -13,5 +13,10 @@
         public int GenreID { get; set; }    
         public Genre Genre { get; set; }
         public ICollection<FilmActor> FilmsActors { get; set; }
+
+        public override string ToString()
+        {
+            return $"{this.Title} - {this.FilmDirector}, {this.DateOfReleasing}, {this.Rating}/10 {this.Genre.Name}.";
+        }
     }
 }
