@@ -136,5 +136,12 @@
                 ResetSelect();
             }
         }
+
+        private void btnStartForm_Click(object sender, EventArgs e)
+        {
+            FrmStart formStart = new FrmStart();
+            this.Hide();
+            formStart.Show();
+        }
     }
 }
