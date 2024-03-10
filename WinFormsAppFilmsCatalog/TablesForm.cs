@@ -2,11 +2,16 @@
 {
     using Controller;
     using Data.Models;
+    using Microsoft.Extensions.Logging;
+    using System.Diagnostics.CodeAnalysis;
 
     public partial class TablesForm : Form
     {
         private FilmController filmController = new FilmController();
         private int editId = 0;
+
+        private ActorController actorController = new ActorController();
+        private int editActorId = 0;
         public TablesForm()
         {
             InitializeComponent();
@@ -61,7 +66,7 @@
 
         private void ToggleSaveUpdate()
         {
-            if(btnUpdate.Visible)
+            if (btnUpdate.Visible)
             {
                 btnSave.Visible = true;
                 btnUpdate.Visible = false;
@@ -80,7 +85,7 @@
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            if(dGVFilm.SelectedRows.Count > 0)
+            if (dGVFilm.SelectedRows.Count > 0)
             {
                 var item = dGVFilm.SelectedRows[0].Cells;
                 int id = int.Parse(item[0].Value.ToString());
@@ -143,5 +148,144 @@
             this.Hide();
             formStart.Show();
         }
+
+
+        //Actor
+        private void btnInsertActor_Click(object sender, EventArgs e)
+        {
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            int years = 0;
+            int.TryParse(txtYears.Text, out years);
+            string dateOfBirth = txtDOB.Text;
+
+            Actor actor = new Actor();
+            actor.FirstName = firstName;
+            actor.LastName = lastName;
+            actor.Years = years;
+            actor.DateOfBirth = dateOfBirth;
+            actorController.Add(actor);
+
+            string fullName = actor.FirstName + " " + actor.LastName;
+            checkedListActor.Items.Add(fullName);
+            UpdateGridActor();
+            ClearTextBoxesActor();
+        }
+        private void UpdateGridActor()
+        {
+            dGVActor.DataSource = actorController.GetAll();
+            dGVActor.ReadOnly = true;
+            dGVActor.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+        private void ClearTextBoxesActor()
+        {
+            txtFirstName.Text = "";
+            txtLastName.Text = "";
+            txtYears.Text = "";
+            txtDOB.Text = "";
+
+        }
+        private void UpdateTextBoxesActor(int id)
+        {
+            Actor update = actorController.Get(id);
+            update.FirstName = txtFirstName.Text;
+            update.LastName = txtLastName.Text;
+            update.Years = int.Parse(txtYears.Text);
+            update.DateOfBirth = txtDOB.Text;
+
+        }
+        private void ToggleSaveUpdateActor()
+        {
+            if (btnUpdateActor.Visible)
+            {
+                btnSaveActor.Visible = true;
+                btnUpdateActor.Visible = false;
+            }
+            else
+            {
+                btnSaveActor.Visible = false;
+                btnUpdateActor.Visible = true;
+            }
+        }
+        private void DisableSelectActor()
+        {
+            dGVActor.Enabled = false;
+        }
+
+        private void btnUpdateActor_Click(object sender, EventArgs e)
+        {
+            if (dGVActor.SelectedRows.Count > 0)
+            {
+                var item = dGVActor.SelectedRows[0].Cells;
+                int id = int.Parse(item[0].Value.ToString());
+                editActorId = id;
+                UpdateTextBoxesActor(id);
+                ToggleSaveUpdateActor();
+                DisableSelectActor();
+            }
+        }
+        private Actor GetEditedActor()
+        {
+            Actor actor = new Actor();
+
+            actor.Id = editActorId;
+            string firstName = txtFirstName.Text;
+            string lastName = txtLastName.Text;
+            int years = 0;
+            int.TryParse(txtYears.Text, out years);
+            string dateOfBirth = txtDOB.Text;
+
+            actor.FirstName = firstName;
+            actor.LastName = lastName;
+            actor.Years = years;
+            actor.DateOfBirth = dateOfBirth;
+
+            return actor;
+
+        }
+        private void ResetSelectActor()
+        {
+            dGVActor.ClearSelection();
+            dGVActor.Enabled = true;
+        }
+
+        private void btnSaveActor_Click(object sender, EventArgs e)
+        {
+            Actor editedActor = GetEditedActor();
+            actorController.Update(editedActor);
+            UpdateGridActor();
+            ResetSelectActor();
+            ToggleSaveUpdateActor();
+        }
+
+        private void btnDeleteActor_Click(object sender, EventArgs e)
+        {
+            if (dGVActor.SelectedRows.Count > 0)
+            {
+                var item = dGVActor.SelectedRows[0].Cells;
+                int id = int.Parse(item[0].Value.ToString());
+                actorController.Delete(id);
+                UpdateGridActor();
+                ResetSelectActor();
+            }
+        }
+
+
+        //FilmActor
+        private void btnConect_Click(object sender, EventArgs e)
+        {
+            //if (dGVActor.SelectedRows.Count > 0)
+            //{
+            //    var item = dGVActor.SelectedRows[0].Cells;
+            //    int id = int.Parse(item[0].Value.ToString());
+            //    //actorController.Delete(id);
+
+            //    UpdateGridActor();
+            //    ResetSelectActor();
+            //}
+        }
+
+
+
     }
 }

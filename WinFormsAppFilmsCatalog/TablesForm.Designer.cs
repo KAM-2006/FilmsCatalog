@@ -28,423 +28,688 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblF = new System.Windows.Forms.Label();
-            this.lblI = new System.Windows.Forms.Label();
-            this.lblL = new System.Windows.Forms.Label();
-            this.lblM = new System.Windows.Forms.Label();
-            this.gbFilm = new System.Windows.Forms.GroupBox();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.lblDirector = new System.Windows.Forms.Label();
-            this.lblDOR = new System.Windows.Forms.Label();
-            this.lblRating = new System.Windows.Forms.Label();
-            this.txtTitle = new System.Windows.Forms.TextBox();
-            this.txtDirector = new System.Windows.Forms.TextBox();
-            this.txtDOR = new System.Windows.Forms.TextBox();
-            this.txtRating = new System.Windows.Forms.TextBox();
-            this.btnInsert = new System.Windows.Forms.Button();
-            this.btnUpdate = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
-            this.btnDelete = new System.Windows.Forms.Button();
-            this.dGVFilm = new System.Windows.Forms.DataGridView();
-            this.lblGenreG = new System.Windows.Forms.Label();
-            this.lblGenreE2 = new System.Windows.Forms.Label();
-            this.lblGenreE1 = new System.Windows.Forms.Label();
-            this.lblGenreN = new System.Windows.Forms.Label();
-            this.lblGenreR = new System.Windows.Forms.Label();
-            this.gbGenre = new System.Windows.Forms.GroupBox();
-            this.lblGenreName = new System.Windows.Forms.Label();
-            this.txtGenreName = new System.Windows.Forms.TextBox();
-            this.btnInsertGenre = new System.Windows.Forms.Button();
-            this.btnUpdateGenre = new System.Windows.Forms.Button();
-            this.btnSaveGenre = new System.Windows.Forms.Button();
-            this.btnDeleteGenre = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnStartForm = new System.Windows.Forms.Button();
-            this.btnOtherOperations = new System.Windows.Forms.Button();
-            this.gbFilm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dGVFilm)).BeginInit();
-            this.gbGenre.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            lblF = new Label();
+            lblI = new Label();
+            lblL = new Label();
+            lblM = new Label();
+            gbFilm = new GroupBox();
+            lblTitle = new Label();
+            lblDirector = new Label();
+            lblDOR = new Label();
+            lblRating = new Label();
+            txtTitle = new TextBox();
+            txtDirector = new TextBox();
+            txtDOR = new TextBox();
+            txtRating = new TextBox();
+            btnInsert = new Button();
+            btnUpdate = new Button();
+            btnSave = new Button();
+            btnDelete = new Button();
+            dGVFilm = new DataGridView();
+            lblGenreG = new Label();
+            lblGenreE2 = new Label();
+            lblGenreE1 = new Label();
+            lblGenreN = new Label();
+            lblGenreR = new Label();
+            gbGenre = new GroupBox();
+            lblGenreName = new Label();
+            txtGenreName = new TextBox();
+            btnInsertGenre = new Button();
+            btnUpdateGenre = new Button();
+            btnSaveGenre = new Button();
+            btnDeleteGenre = new Button();
+            dataGridView1 = new DataGridView();
+            btnStartForm = new Button();
+            btnOtherOperations = new Button();
+            groupBoxActor = new GroupBox();
+            lblR = new Label();
+            lblO = new Label();
+            lblA = new Label();
+            lblT = new Label();
+            lblC = new Label();
+            lblFirstName = new Label();
+            lblLastName = new Label();
+            lblYears = new Label();
+            lblDateOfBirth = new Label();
+            lblText = new Label();
+            txtFirstName = new TextBox();
+            txtLastName = new TextBox();
+            txtYears = new TextBox();
+            txtDOB = new TextBox();
+            btnInsertActor = new Button();
+            btnUpdateActor = new Button();
+            btnSaveActor = new Button();
+            btnDeleteActor = new Button();
+            dGVActor = new DataGridView();
+            btnConect = new Button();
+            checkedListActor = new CheckedListBox();
+            gbFilm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dGVFilm).BeginInit();
+            gbGenre.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            groupBoxActor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dGVActor).BeginInit();
+            SuspendLayout();
             // 
             // lblF
             // 
-            this.lblF.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.lblF.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblF.Location = new System.Drawing.Point(1, 1);
-            this.lblF.Name = "lblF";
-            this.lblF.Size = new System.Drawing.Size(47, 43);
-            this.lblF.TabIndex = 0;
-            this.lblF.Text = "F";
-            this.lblF.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblF.BackColor = Color.FromArgb(255, 224, 192);
+            lblF.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblF.Location = new Point(1, 1);
+            lblF.Name = "lblF";
+            lblF.Size = new Size(47, 43);
+            lblF.TabIndex = 0;
+            lblF.Text = "F";
+            lblF.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblI
             // 
-            this.lblI.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.lblI.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblI.Location = new System.Drawing.Point(1, 44);
-            this.lblI.Name = "lblI";
-            this.lblI.Size = new System.Drawing.Size(47, 46);
-            this.lblI.TabIndex = 1;
-            this.lblI.Text = "I";
-            this.lblI.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblI.BackColor = Color.FromArgb(255, 224, 192);
+            lblI.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblI.Location = new Point(1, 44);
+            lblI.Name = "lblI";
+            lblI.Size = new Size(47, 46);
+            lblI.TabIndex = 1;
+            lblI.Text = "I";
+            lblI.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblL
             // 
-            this.lblL.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.lblL.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblL.Location = new System.Drawing.Point(1, 90);
-            this.lblL.Name = "lblL";
-            this.lblL.Size = new System.Drawing.Size(47, 46);
-            this.lblL.TabIndex = 2;
-            this.lblL.Text = "L";
-            this.lblL.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblL.BackColor = Color.FromArgb(255, 224, 192);
+            lblL.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblL.Location = new Point(1, 90);
+            lblL.Name = "lblL";
+            lblL.Size = new Size(47, 46);
+            lblL.TabIndex = 2;
+            lblL.Text = "L";
+            lblL.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblM
             // 
-            this.lblM.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.lblM.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblM.Location = new System.Drawing.Point(1, 136);
-            this.lblM.Name = "lblM";
-            this.lblM.Size = new System.Drawing.Size(47, 49);
-            this.lblM.TabIndex = 3;
-            this.lblM.Text = "M";
-            this.lblM.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblM.BackColor = Color.FromArgb(255, 224, 192);
+            lblM.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblM.Location = new Point(1, 136);
+            lblM.Name = "lblM";
+            lblM.Size = new Size(47, 49);
+            lblM.TabIndex = 3;
+            lblM.Text = "M";
+            lblM.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // gbFilm
             // 
-            this.gbFilm.Controls.Add(this.lblM);
-            this.gbFilm.Controls.Add(this.lblL);
-            this.gbFilm.Controls.Add(this.lblI);
-            this.gbFilm.Controls.Add(this.lblF);
-            this.gbFilm.Location = new System.Drawing.Point(12, 21);
-            this.gbFilm.Name = "gbFilm";
-            this.gbFilm.Size = new System.Drawing.Size(48, 184);
-            this.gbFilm.TabIndex = 4;
-            this.gbFilm.TabStop = false;
+            gbFilm.Controls.Add(lblM);
+            gbFilm.Controls.Add(lblL);
+            gbFilm.Controls.Add(lblI);
+            gbFilm.Controls.Add(lblF);
+            gbFilm.Location = new Point(12, 21);
+            gbFilm.Name = "gbFilm";
+            gbFilm.Size = new Size(48, 184);
+            gbFilm.TabIndex = 4;
+            gbFilm.TabStop = false;
             // 
             // lblTitle
             // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTitle.Location = new System.Drawing.Point(66, 32);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(63, 31);
-            this.lblTitle.TabIndex = 5;
-            this.lblTitle.Text = "Title:";
+            lblTitle.AutoSize = true;
+            lblTitle.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblTitle.Location = new Point(66, 32);
+            lblTitle.Name = "lblTitle";
+            lblTitle.Size = new Size(63, 31);
+            lblTitle.TabIndex = 5;
+            lblTitle.Text = "Title:";
             // 
             // lblDirector
             // 
-            this.lblDirector.AutoSize = true;
-            this.lblDirector.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDirector.Location = new System.Drawing.Point(66, 77);
-            this.lblDirector.Name = "lblDirector";
-            this.lblDirector.Size = new System.Drawing.Size(101, 31);
-            this.lblDirector.TabIndex = 6;
-            this.lblDirector.Text = "Director:";
+            lblDirector.AutoSize = true;
+            lblDirector.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDirector.Location = new Point(66, 77);
+            lblDirector.Name = "lblDirector";
+            lblDirector.Size = new Size(101, 31);
+            lblDirector.TabIndex = 6;
+            lblDirector.Text = "Director:";
             // 
             // lblDOR
             // 
-            this.lblDOR.AutoSize = true;
-            this.lblDOR.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDOR.Location = new System.Drawing.Point(66, 123);
-            this.lblDOR.Name = "lblDOR";
-            this.lblDOR.Size = new System.Drawing.Size(171, 31);
-            this.lblDOR.TabIndex = 7;
-            this.lblDOR.Text = "Date of release:";
+            lblDOR.AutoSize = true;
+            lblDOR.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDOR.Location = new Point(66, 123);
+            lblDOR.Name = "lblDOR";
+            lblDOR.Size = new Size(171, 31);
+            lblDOR.TabIndex = 7;
+            lblDOR.Text = "Date of release:";
             // 
             // lblRating
             // 
-            this.lblRating.AutoSize = true;
-            this.lblRating.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblRating.Location = new System.Drawing.Point(66, 170);
-            this.lblRating.Name = "lblRating";
-            this.lblRating.Size = new System.Drawing.Size(86, 31);
-            this.lblRating.TabIndex = 8;
-            this.lblRating.Text = "Rating:";
+            lblRating.AutoSize = true;
+            lblRating.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRating.Location = new Point(66, 170);
+            lblRating.Name = "lblRating";
+            lblRating.Size = new Size(86, 31);
+            lblRating.TabIndex = 8;
+            lblRating.Text = "Rating:";
             // 
             // txtTitle
             // 
-            this.txtTitle.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtTitle.Location = new System.Drawing.Point(135, 33);
-            this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(355, 30);
-            this.txtTitle.TabIndex = 9;
+            txtTitle.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTitle.Location = new Point(135, 33);
+            txtTitle.Name = "txtTitle";
+            txtTitle.Size = new Size(355, 30);
+            txtTitle.TabIndex = 9;
             // 
             // txtDirector
             // 
-            this.txtDirector.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDirector.Location = new System.Drawing.Point(173, 78);
-            this.txtDirector.Name = "txtDirector";
-            this.txtDirector.Size = new System.Drawing.Size(317, 30);
-            this.txtDirector.TabIndex = 10;
+            txtDirector.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDirector.Location = new Point(173, 78);
+            txtDirector.Name = "txtDirector";
+            txtDirector.Size = new Size(317, 30);
+            txtDirector.TabIndex = 10;
             // 
             // txtDOR
             // 
-            this.txtDOR.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtDOR.Location = new System.Drawing.Point(243, 124);
-            this.txtDOR.Name = "txtDOR";
-            this.txtDOR.Size = new System.Drawing.Size(247, 30);
-            this.txtDOR.TabIndex = 11;
+            txtDOR.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDOR.Location = new Point(243, 124);
+            txtDOR.Name = "txtDOR";
+            txtDOR.Size = new Size(247, 30);
+            txtDOR.TabIndex = 11;
             // 
             // txtRating
             // 
-            this.txtRating.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtRating.Location = new System.Drawing.Point(158, 171);
-            this.txtRating.Name = "txtRating";
-            this.txtRating.Size = new System.Drawing.Size(332, 30);
-            this.txtRating.TabIndex = 12;
+            txtRating.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtRating.Location = new Point(158, 171);
+            txtRating.Name = "txtRating";
+            txtRating.Size = new Size(332, 30);
+            txtRating.TabIndex = 12;
             // 
             // btnInsert
             // 
-            this.btnInsert.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnInsert.Location = new System.Drawing.Point(496, 21);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(110, 41);
-            this.btnInsert.TabIndex = 13;
-            this.btnInsert.Text = "Insert";
-            this.btnInsert.UseVisualStyleBackColor = true;
-            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
+            btnInsert.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnInsert.Location = new Point(496, 21);
+            btnInsert.Name = "btnInsert";
+            btnInsert.Size = new Size(110, 41);
+            btnInsert.TabIndex = 13;
+            btnInsert.Text = "Insert";
+            btnInsert.UseVisualStyleBackColor = true;
+            btnInsert.Click += btnInsert_Click;
             // 
             // btnUpdate
             // 
-            this.btnUpdate.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdate.Location = new System.Drawing.Point(496, 65);
-            this.btnUpdate.Name = "btnUpdate";
-            this.btnUpdate.Size = new System.Drawing.Size(110, 41);
-            this.btnUpdate.TabIndex = 14;
-            this.btnUpdate.Text = "Update";
-            this.btnUpdate.UseVisualStyleBackColor = true;
-            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
+            btnUpdate.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUpdate.Location = new Point(496, 65);
+            btnUpdate.Name = "btnUpdate";
+            btnUpdate.Size = new Size(110, 41);
+            btnUpdate.TabIndex = 14;
+            btnUpdate.Text = "Update";
+            btnUpdate.UseVisualStyleBackColor = true;
+            btnUpdate.Click += btnUpdate_Click;
             // 
             // btnSave
             // 
-            this.btnSave.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSave.Location = new System.Drawing.Point(496, 112);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(110, 41);
-            this.btnSave.TabIndex = 15;
-            this.btnSave.Text = "Save";
-            this.btnSave.UseVisualStyleBackColor = true;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            btnSave.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSave.Location = new Point(496, 112);
+            btnSave.Name = "btnSave";
+            btnSave.Size = new Size(110, 41);
+            btnSave.TabIndex = 15;
+            btnSave.Text = "Save";
+            btnSave.UseVisualStyleBackColor = true;
+            btnSave.Click += btnSave_Click;
             // 
             // btnDelete
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDelete.Location = new System.Drawing.Point(496, 159);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(110, 41);
-            this.btnDelete.TabIndex = 16;
-            this.btnDelete.Text = "Delete";
-            this.btnDelete.UseVisualStyleBackColor = true;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            btnDelete.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDelete.Location = new Point(496, 159);
+            btnDelete.Name = "btnDelete";
+            btnDelete.Size = new Size(110, 41);
+            btnDelete.TabIndex = 16;
+            btnDelete.Text = "Delete";
+            btnDelete.UseVisualStyleBackColor = true;
+            btnDelete.Click += btnDelete_Click;
             // 
             // dGVFilm
             // 
-            this.dGVFilm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dGVFilm.Location = new System.Drawing.Point(612, 21);
-            this.dGVFilm.Name = "dGVFilm";
-            this.dGVFilm.RowHeadersWidth = 51;
-            this.dGVFilm.RowTemplate.Height = 29;
-            this.dGVFilm.Size = new System.Drawing.Size(543, 180);
-            this.dGVFilm.TabIndex = 17;
+            dGVFilm.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGVFilm.Location = new Point(612, 21);
+            dGVFilm.Name = "dGVFilm";
+            dGVFilm.RowHeadersWidth = 51;
+            dGVFilm.RowTemplate.Height = 29;
+            dGVFilm.Size = new Size(543, 180);
+            dGVFilm.TabIndex = 17;
             // 
             // lblGenreG
             // 
-            this.lblGenreG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lblGenreG.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblGenreG.Location = new System.Drawing.Point(2, 4);
-            this.lblGenreG.Name = "lblGenreG";
-            this.lblGenreG.Size = new System.Drawing.Size(48, 46);
-            this.lblGenreG.TabIndex = 18;
-            this.lblGenreG.Text = "G";
-            this.lblGenreG.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblGenreG.BackColor = Color.Coral;
+            lblGenreG.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGenreG.Location = new Point(2, 4);
+            lblGenreG.Name = "lblGenreG";
+            lblGenreG.Size = new Size(48, 46);
+            lblGenreG.TabIndex = 18;
+            lblGenreG.Text = "G";
+            lblGenreG.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblGenreE2
             // 
-            this.lblGenreE2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lblGenreE2.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblGenreE2.Location = new System.Drawing.Point(2, 197);
-            this.lblGenreE2.Name = "lblGenreE2";
-            this.lblGenreE2.Size = new System.Drawing.Size(48, 49);
-            this.lblGenreE2.TabIndex = 22;
-            this.lblGenreE2.Text = "E";
-            this.lblGenreE2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblGenreE2.BackColor = Color.Coral;
+            lblGenreE2.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGenreE2.Location = new Point(2, 197);
+            lblGenreE2.Name = "lblGenreE2";
+            lblGenreE2.Size = new Size(48, 49);
+            lblGenreE2.TabIndex = 22;
+            lblGenreE2.Text = "E";
+            lblGenreE2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblGenreE1
             // 
-            this.lblGenreE1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lblGenreE1.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblGenreE1.Location = new System.Drawing.Point(2, 50);
-            this.lblGenreE1.Name = "lblGenreE1";
-            this.lblGenreE1.Size = new System.Drawing.Size(48, 49);
-            this.lblGenreE1.TabIndex = 23;
-            this.lblGenreE1.Text = "E";
-            this.lblGenreE1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblGenreE1.BackColor = Color.Coral;
+            lblGenreE1.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGenreE1.Location = new Point(2, 50);
+            lblGenreE1.Name = "lblGenreE1";
+            lblGenreE1.Size = new Size(48, 49);
+            lblGenreE1.TabIndex = 23;
+            lblGenreE1.Text = "E";
+            lblGenreE1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblGenreN
             // 
-            this.lblGenreN.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lblGenreN.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblGenreN.Location = new System.Drawing.Point(2, 99);
-            this.lblGenreN.Name = "lblGenreN";
-            this.lblGenreN.Size = new System.Drawing.Size(48, 49);
-            this.lblGenreN.TabIndex = 24;
-            this.lblGenreN.Text = "N";
-            this.lblGenreN.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblGenreN.BackColor = Color.Coral;
+            lblGenreN.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGenreN.Location = new Point(2, 99);
+            lblGenreN.Name = "lblGenreN";
+            lblGenreN.Size = new Size(48, 49);
+            lblGenreN.TabIndex = 24;
+            lblGenreN.Text = "N";
+            lblGenreN.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblGenreR
             // 
-            this.lblGenreR.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.lblGenreR.Font = new System.Drawing.Font("Showcard Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblGenreR.Location = new System.Drawing.Point(2, 148);
-            this.lblGenreR.Name = "lblGenreR";
-            this.lblGenreR.Size = new System.Drawing.Size(48, 49);
-            this.lblGenreR.TabIndex = 25;
-            this.lblGenreR.Text = "R";
-            this.lblGenreR.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            lblGenreR.BackColor = Color.Coral;
+            lblGenreR.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblGenreR.Location = new Point(2, 148);
+            lblGenreR.Name = "lblGenreR";
+            lblGenreR.Size = new Size(48, 49);
+            lblGenreR.TabIndex = 25;
+            lblGenreR.Text = "R";
+            lblGenreR.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // gbGenre
             // 
-            this.gbGenre.Controls.Add(this.lblGenreR);
-            this.gbGenre.Controls.Add(this.lblGenreN);
-            this.gbGenre.Controls.Add(this.lblGenreE1);
-            this.gbGenre.Controls.Add(this.lblGenreE2);
-            this.gbGenre.Controls.Add(this.lblGenreG);
-            this.gbGenre.Location = new System.Drawing.Point(10, 540);
-            this.gbGenre.Name = "gbGenre";
-            this.gbGenre.Size = new System.Drawing.Size(50, 248);
-            this.gbGenre.TabIndex = 26;
-            this.gbGenre.TabStop = false;
+            gbGenre.Controls.Add(lblGenreR);
+            gbGenre.Controls.Add(lblGenreN);
+            gbGenre.Controls.Add(lblGenreE1);
+            gbGenre.Controls.Add(lblGenreE2);
+            gbGenre.Controls.Add(lblGenreG);
+            gbGenre.Location = new Point(10, 540);
+            gbGenre.Name = "gbGenre";
+            gbGenre.Size = new Size(50, 248);
+            gbGenre.TabIndex = 26;
+            gbGenre.TabStop = false;
             // 
             // lblGenreName
             // 
-            this.lblGenreName.AutoSize = true;
-            this.lblGenreName.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblGenreName.Location = new System.Drawing.Point(66, 608);
-            this.lblGenreName.Name = "lblGenreName";
-            this.lblGenreName.Size = new System.Drawing.Size(210, 31);
-            this.lblGenreName.TabIndex = 27;
-            this.lblGenreName.Text = "Name of the genre:";
+            lblGenreName.AutoSize = true;
+            lblGenreName.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblGenreName.Location = new Point(66, 608);
+            lblGenreName.Name = "lblGenreName";
+            lblGenreName.Size = new Size(210, 31);
+            lblGenreName.TabIndex = 27;
+            lblGenreName.Text = "Name of the genre:";
             // 
             // txtGenreName
             // 
-            this.txtGenreName.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtGenreName.Location = new System.Drawing.Point(282, 609);
-            this.txtGenreName.Name = "txtGenreName";
-            this.txtGenreName.Size = new System.Drawing.Size(324, 30);
-            this.txtGenreName.TabIndex = 28;
+            txtGenreName.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtGenreName.Location = new Point(282, 609);
+            txtGenreName.Name = "txtGenreName";
+            txtGenreName.Size = new Size(324, 30);
+            txtGenreName.TabIndex = 28;
             // 
             // btnInsertGenre
             // 
-            this.btnInsertGenre.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnInsertGenre.Location = new System.Drawing.Point(66, 696);
-            this.btnInsertGenre.Name = "btnInsertGenre";
-            this.btnInsertGenre.Size = new System.Drawing.Size(110, 41);
-            this.btnInsertGenre.TabIndex = 29;
-            this.btnInsertGenre.Text = "Insert";
-            this.btnInsertGenre.UseVisualStyleBackColor = true;
+            btnInsertGenre.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnInsertGenre.Location = new Point(66, 696);
+            btnInsertGenre.Name = "btnInsertGenre";
+            btnInsertGenre.Size = new Size(110, 41);
+            btnInsertGenre.TabIndex = 29;
+            btnInsertGenre.Text = "Insert";
+            btnInsertGenre.UseVisualStyleBackColor = true;
             // 
             // btnUpdateGenre
             // 
-            this.btnUpdateGenre.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdateGenre.Location = new System.Drawing.Point(207, 696);
-            this.btnUpdateGenre.Name = "btnUpdateGenre";
-            this.btnUpdateGenre.Size = new System.Drawing.Size(110, 41);
-            this.btnUpdateGenre.TabIndex = 30;
-            this.btnUpdateGenre.Text = "Update";
-            this.btnUpdateGenre.UseVisualStyleBackColor = true;
+            btnUpdateGenre.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUpdateGenre.Location = new Point(207, 696);
+            btnUpdateGenre.Name = "btnUpdateGenre";
+            btnUpdateGenre.Size = new Size(110, 41);
+            btnUpdateGenre.TabIndex = 30;
+            btnUpdateGenre.Text = "Update";
+            btnUpdateGenre.UseVisualStyleBackColor = true;
             // 
             // btnSaveGenre
             // 
-            this.btnSaveGenre.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSaveGenre.Location = new System.Drawing.Point(352, 696);
-            this.btnSaveGenre.Name = "btnSaveGenre";
-            this.btnSaveGenre.Size = new System.Drawing.Size(110, 41);
-            this.btnSaveGenre.TabIndex = 31;
-            this.btnSaveGenre.Text = "Save";
-            this.btnSaveGenre.UseVisualStyleBackColor = true;
+            btnSaveGenre.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSaveGenre.Location = new Point(352, 696);
+            btnSaveGenre.Name = "btnSaveGenre";
+            btnSaveGenre.Size = new Size(110, 41);
+            btnSaveGenre.TabIndex = 31;
+            btnSaveGenre.Text = "Save";
+            btnSaveGenre.UseVisualStyleBackColor = true;
             // 
             // btnDeleteGenre
             // 
-            this.btnDeleteGenre.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnDeleteGenre.Location = new System.Drawing.Point(496, 696);
-            this.btnDeleteGenre.Name = "btnDeleteGenre";
-            this.btnDeleteGenre.Size = new System.Drawing.Size(110, 41);
-            this.btnDeleteGenre.TabIndex = 32;
-            this.btnDeleteGenre.Text = "Delete";
-            this.btnDeleteGenre.UseVisualStyleBackColor = true;
+            btnDeleteGenre.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDeleteGenre.Location = new Point(496, 696);
+            btnDeleteGenre.Name = "btnDeleteGenre";
+            btnDeleteGenre.Size = new Size(110, 41);
+            btnDeleteGenre.TabIndex = 32;
+            btnDeleteGenre.Text = "Delete";
+            btnDeleteGenre.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(612, 540);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(543, 242);
-            this.dataGridView1.TabIndex = 33;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Location = new Point(612, 540);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 51;
+            dataGridView1.RowTemplate.Height = 29;
+            dataGridView1.Size = new Size(543, 242);
+            dataGridView1.TabIndex = 33;
             // 
             // btnStartForm
             // 
-            this.btnStartForm.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnStartForm.Location = new System.Drawing.Point(1363, 806);
-            this.btnStartForm.Name = "btnStartForm";
-            this.btnStartForm.Size = new System.Drawing.Size(112, 38);
-            this.btnStartForm.TabIndex = 34;
-            this.btnStartForm.Text = "Start Form";
-            this.btnStartForm.UseVisualStyleBackColor = true;
-            this.btnStartForm.Click += new System.EventHandler(this.btnStartForm_Click);
+            btnStartForm.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnStartForm.Location = new Point(1363, 806);
+            btnStartForm.Name = "btnStartForm";
+            btnStartForm.Size = new Size(112, 38);
+            btnStartForm.TabIndex = 34;
+            btnStartForm.Text = "Start Form";
+            btnStartForm.UseVisualStyleBackColor = true;
+            btnStartForm.Click += btnStartForm_Click;
             // 
             // btnOtherOperations
             // 
-            this.btnOtherOperations.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnOtherOperations.Location = new System.Drawing.Point(1481, 806);
-            this.btnOtherOperations.Name = "btnOtherOperations";
-            this.btnOtherOperations.Size = new System.Drawing.Size(172, 38);
-            this.btnOtherOperations.TabIndex = 35;
-            this.btnOtherOperations.Text = "Other operations";
-            this.btnOtherOperations.UseVisualStyleBackColor = true;
+            btnOtherOperations.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            btnOtherOperations.Location = new Point(1481, 806);
+            btnOtherOperations.Name = "btnOtherOperations";
+            btnOtherOperations.Size = new Size(172, 38);
+            btnOtherOperations.TabIndex = 35;
+            btnOtherOperations.Text = "Other operations";
+            btnOtherOperations.UseVisualStyleBackColor = true;
+            // 
+            // groupBoxActor
+            // 
+            groupBoxActor.Controls.Add(lblR);
+            groupBoxActor.Controls.Add(lblO);
+            groupBoxActor.Controls.Add(lblA);
+            groupBoxActor.Controls.Add(lblT);
+            groupBoxActor.Controls.Add(lblC);
+            groupBoxActor.Location = new Point(13, 255);
+            groupBoxActor.Name = "groupBoxActor";
+            groupBoxActor.Size = new Size(47, 234);
+            groupBoxActor.TabIndex = 36;
+            groupBoxActor.TabStop = false;
+            // 
+            // lblR
+            // 
+            lblR.BackColor = Color.FromArgb(255, 192, 128);
+            lblR.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblR.Location = new Point(0, 190);
+            lblR.Name = "lblR";
+            lblR.Size = new Size(47, 46);
+            lblR.TabIndex = 38;
+            lblR.Text = "R";
+            lblR.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblO
+            // 
+            lblO.BackColor = Color.FromArgb(255, 192, 128);
+            lblO.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblO.Location = new Point(0, 144);
+            lblO.Name = "lblO";
+            lblO.Size = new Size(47, 46);
+            lblO.TabIndex = 37;
+            lblO.Text = "o";
+            lblO.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblA
+            // 
+            lblA.BackColor = Color.FromArgb(255, 192, 128);
+            lblA.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblA.Location = new Point(0, 9);
+            lblA.Name = "lblA";
+            lblA.Size = new Size(47, 43);
+            lblA.TabIndex = 0;
+            lblA.Text = "A";
+            lblA.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblT
+            // 
+            lblT.BackColor = Color.FromArgb(255, 192, 128);
+            lblT.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblT.Location = new Point(-1, 98);
+            lblT.Name = "lblT";
+            lblT.Size = new Size(47, 46);
+            lblT.TabIndex = 2;
+            lblT.Text = "T";
+            lblT.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblC
+            // 
+            lblC.BackColor = Color.FromArgb(255, 192, 128);
+            lblC.Font = new Font("Showcard Gothic", 19.8F, FontStyle.Bold, GraphicsUnit.Point);
+            lblC.Location = new Point(-1, 52);
+            lblC.Name = "lblC";
+            lblC.Size = new Size(47, 46);
+            lblC.TabIndex = 1;
+            lblC.Text = "C";
+            lblC.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // lblFirstName
+            // 
+            lblFirstName.AutoSize = true;
+            lblFirstName.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblFirstName.Location = new Point(66, 290);
+            lblFirstName.Name = "lblFirstName";
+            lblFirstName.Size = new Size(125, 31);
+            lblFirstName.TabIndex = 38;
+            lblFirstName.Text = "First name:";
+            // 
+            // lblLastName
+            // 
+            lblLastName.AutoSize = true;
+            lblLastName.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblLastName.Location = new Point(66, 336);
+            lblLastName.Name = "lblLastName";
+            lblLastName.Size = new Size(123, 31);
+            lblLastName.TabIndex = 39;
+            lblLastName.Text = "Last name:";
+            // 
+            // lblYears
+            // 
+            lblYears.AutoSize = true;
+            lblYears.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblYears.Location = new Point(68, 382);
+            lblYears.Name = "lblYears";
+            lblYears.Size = new Size(72, 31);
+            lblYears.TabIndex = 40;
+            lblYears.Text = "Years:";
+            // 
+            // lblDateOfBirth
+            // 
+            lblDateOfBirth.AutoSize = true;
+            lblDateOfBirth.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblDateOfBirth.Location = new Point(68, 425);
+            lblDateOfBirth.Name = "lblDateOfBirth";
+            lblDateOfBirth.Size = new Size(154, 31);
+            lblDateOfBirth.TabIndex = 41;
+            lblDateOfBirth.Text = "Date of birth: ";
+            // 
+            // lblText
+            // 
+            lblText.AutoSize = true;
+            lblText.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            lblText.Location = new Point(68, 244);
+            lblText.Name = "lblText";
+            lblText.Size = new Size(360, 31);
+            lblText.TabIndex = 37;
+            lblText.Text = "Enter information for table Actors:";
+            // 
+            // txtFirstName
+            // 
+            txtFirstName.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtFirstName.Location = new Point(197, 291);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.Size = new Size(293, 30);
+            txtFirstName.TabIndex = 42;
+            // 
+            // txtLastName
+            // 
+            txtLastName.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtLastName.Location = new Point(197, 340);
+            txtLastName.Name = "txtLastName";
+            txtLastName.Size = new Size(293, 30);
+            txtLastName.TabIndex = 43;
+            // 
+            // txtYears
+            // 
+            txtYears.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtYears.Location = new Point(146, 386);
+            txtYears.Name = "txtYears";
+            txtYears.Size = new Size(344, 30);
+            txtYears.TabIndex = 44;
+            // 
+            // txtDOB
+            // 
+            txtDOB.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point);
+            txtDOB.Location = new Point(217, 425);
+            txtDOB.Name = "txtDOB";
+            txtDOB.Size = new Size(273, 30);
+            txtDOB.TabIndex = 45;
+            // 
+            // btnInsertActor
+            // 
+            btnInsertActor.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnInsertActor.Location = new Point(496, 290);
+            btnInsertActor.Name = "btnInsertActor";
+            btnInsertActor.Size = new Size(110, 41);
+            btnInsertActor.TabIndex = 46;
+            btnInsertActor.Text = "Insert";
+            btnInsertActor.UseVisualStyleBackColor = true;
+            btnInsertActor.Click += btnInsertActor_Click;
+            // 
+            // btnUpdateActor
+            // 
+            btnUpdateActor.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnUpdateActor.Location = new Point(496, 353);
+            btnUpdateActor.Name = "btnUpdateActor";
+            btnUpdateActor.Size = new Size(110, 41);
+            btnUpdateActor.TabIndex = 47;
+            btnUpdateActor.Text = "Update";
+            btnUpdateActor.UseVisualStyleBackColor = true;
+            btnUpdateActor.Click += btnUpdateActor_Click;
+            // 
+            // btnSaveActor
+            // 
+            btnSaveActor.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnSaveActor.Location = new Point(496, 353);
+            btnSaveActor.Name = "btnSaveActor";
+            btnSaveActor.Size = new Size(110, 41);
+            btnSaveActor.TabIndex = 48;
+            btnSaveActor.Text = "Save";
+            btnSaveActor.UseVisualStyleBackColor = true;
+            btnSaveActor.Click += btnSaveActor_Click;
+            // 
+            // btnDeleteActor
+            // 
+            btnDeleteActor.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnDeleteActor.Location = new Point(496, 414);
+            btnDeleteActor.Name = "btnDeleteActor";
+            btnDeleteActor.Size = new Size(110, 41);
+            btnDeleteActor.TabIndex = 49;
+            btnDeleteActor.Text = "Delete";
+            btnDeleteActor.UseVisualStyleBackColor = true;
+            btnDeleteActor.Click += btnDeleteActor_Click;
+            // 
+            // dGVActor
+            // 
+            dGVActor.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dGVActor.Location = new Point(612, 276);
+            dGVActor.Name = "dGVActor";
+            dGVActor.RowHeadersWidth = 51;
+            dGVActor.RowTemplate.Height = 29;
+            dGVActor.Size = new Size(543, 180);
+            dGVActor.TabIndex = 50;
+            // 
+            // btnConect
+            // 
+            btnConect.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            btnConect.Location = new Point(1437, 174);
+            btnConect.Name = "btnConect";
+            btnConect.Size = new Size(178, 101);
+            btnConect.TabIndex = 51;
+            btnConect.Text = "Connection";
+            btnConect.UseVisualStyleBackColor = true;
+            btnConect.Click += btnConect_Click;
+            // 
+            // checkedListActor
+            // 
+            checkedListActor.FormattingEnabled = true;
+            checkedListActor.Location = new Point(1188, 43);
+            checkedListActor.Name = "checkedListActor";
+            checkedListActor.Size = new Size(215, 356);
+            checkedListActor.TabIndex = 52;
             // 
             // TablesForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1665, 856);
-            this.Controls.Add(this.btnOtherOperations);
-            this.Controls.Add(this.btnStartForm);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnDeleteGenre);
-            this.Controls.Add(this.btnSaveGenre);
-            this.Controls.Add(this.btnUpdateGenre);
-            this.Controls.Add(this.btnInsertGenre);
-            this.Controls.Add(this.txtGenreName);
-            this.Controls.Add(this.lblGenreName);
-            this.Controls.Add(this.gbGenre);
-            this.Controls.Add(this.dGVFilm);
-            this.Controls.Add(this.btnDelete);
-            this.Controls.Add(this.btnSave);
-            this.Controls.Add(this.btnUpdate);
-            this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.txtRating);
-            this.Controls.Add(this.txtDOR);
-            this.Controls.Add(this.txtDirector);
-            this.Controls.Add(this.txtTitle);
-            this.Controls.Add(this.lblRating);
-            this.Controls.Add(this.lblDOR);
-            this.Controls.Add(this.lblDirector);
-            this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.gbFilm);
-            this.Name = "TablesForm";
-            this.Text = "TablesForm";
-            this.Load += new System.EventHandler(this.TablesForm_Load);
-            this.gbFilm.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dGVFilm)).EndInit();
-            this.gbGenre.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(1665, 856);
+            Controls.Add(checkedListActor);
+            Controls.Add(btnConect);
+            Controls.Add(dGVActor);
+            Controls.Add(btnDeleteActor);
+            Controls.Add(btnSaveActor);
+            Controls.Add(btnUpdateActor);
+            Controls.Add(btnInsertActor);
+            Controls.Add(txtDOB);
+            Controls.Add(txtYears);
+            Controls.Add(txtLastName);
+            Controls.Add(txtFirstName);
+            Controls.Add(lblDateOfBirth);
+            Controls.Add(lblYears);
+            Controls.Add(lblLastName);
+            Controls.Add(lblFirstName);
+            Controls.Add(lblText);
+            Controls.Add(groupBoxActor);
+            Controls.Add(btnOtherOperations);
+            Controls.Add(btnStartForm);
+            Controls.Add(dataGridView1);
+            Controls.Add(btnDeleteGenre);
+            Controls.Add(btnSaveGenre);
+            Controls.Add(btnUpdateGenre);
+            Controls.Add(btnInsertGenre);
+            Controls.Add(txtGenreName);
+            Controls.Add(lblGenreName);
+            Controls.Add(gbGenre);
+            Controls.Add(dGVFilm);
+            Controls.Add(btnDelete);
+            Controls.Add(btnSave);
+            Controls.Add(btnUpdate);
+            Controls.Add(btnInsert);
+            Controls.Add(txtRating);
+            Controls.Add(txtDOR);
+            Controls.Add(txtDirector);
+            Controls.Add(txtTitle);
+            Controls.Add(lblRating);
+            Controls.Add(lblDOR);
+            Controls.Add(lblDirector);
+            Controls.Add(lblTitle);
+            Controls.Add(gbFilm);
+            Name = "TablesForm";
+            Text = "TablesForm";
+            Load += TablesForm_Load;
+            gbFilm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dGVFilm).EndInit();
+            gbGenre.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            groupBoxActor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dGVActor).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -482,5 +747,27 @@
         private DataGridView dataGridView1;
         private Button btnStartForm;
         private Button btnOtherOperations;
+        private GroupBox groupBoxActor;
+        private Label lblR;
+        private Label lblO;
+        private Label lblA;
+        private Label lblT;
+        private Label lblC;
+        private Label lblFirstName;
+        private Label lblLastName;
+        private Label lblYears;
+        private Label lblDateOfBirth;
+        private Label lblText;
+        private TextBox txtFirstName;
+        private TextBox txtLastName;
+        private TextBox txtYears;
+        private TextBox txtDOB;
+        private Button btnInsertActor;
+        private Button btnUpdateActor;
+        private Button btnSaveActor;
+        private Button btnDeleteActor;
+        private DataGridView dGVActor;
+        private Button btnConect;
+        private CheckedListBox checkedListActor;
     }
 }
