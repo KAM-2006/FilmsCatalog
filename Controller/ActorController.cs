@@ -52,5 +52,18 @@
                 }
             }
         }
+        public int GetByName(string firstname, string lastname)
+        {
+            List<Actor> actors = this.GetAll();
+            int id = 0;
+            foreach (Actor actor in actors)
+            {
+                if (actor.FirstName == firstname && actor.LastName == lastname)
+                {
+                    id = actor.Id;
+                }
+            }
+            return id;
+        }
     }
 }
