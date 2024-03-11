@@ -28,75 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblText = new System.Windows.Forms.Label();
-            this.btnInsert = new System.Windows.Forms.Button();
-            this.btnShow = new System.Windows.Forms.Button();
-            this.btnOtherOperations = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            lblText = new Label();
+            btnInsert = new Button();
+            btnShow = new Button();
+            btnOtherOperations = new Button();
+            SuspendLayout();
             // 
             // lblText
             // 
-            this.lblText.AutoSize = true;
-            this.lblText.Font = new System.Drawing.Font("Rockwell", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
-            this.lblText.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.lblText.Location = new System.Drawing.Point(50, 48);
-            this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(582, 99);
-            this.lblText.TabIndex = 0;
-            this.lblText.Text = "Films Catalog";
+            lblText.AutoSize = true;
+            lblText.Font = new Font("Rockwell", 48F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point);
+            lblText.ForeColor = SystemColors.ButtonHighlight;
+            lblText.Location = new Point(12, 40);
+            lblText.Name = "lblText";
+            lblText.Size = new Size(738, 99);
+            lblText.TabIndex = 0;
+            lblText.Text = "Каталог за филми";
             // 
             // btnInsert
             // 
-            this.btnInsert.BackColor = System.Drawing.Color.White;
-            this.btnInsert.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnInsert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnInsert.Location = new System.Drawing.Point(164, 184);
-            this.btnInsert.Name = "btnInsert";
-            this.btnInsert.Size = new System.Drawing.Size(332, 109);
-            this.btnInsert.TabIndex = 1;
-            this.btnInsert.Text = "Insert information into database";
-            this.btnInsert.UseVisualStyleBackColor = false;
+            btnInsert.BackColor = Color.White;
+            btnInsert.Font = new Font("Lucida Bright", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            btnInsert.ForeColor = Color.FromArgb(0, 192, 192);
+            btnInsert.Location = new Point(164, 184);
+            btnInsert.Name = "btnInsert";
+            btnInsert.Size = new Size(332, 109);
+            btnInsert.TabIndex = 1;
+            btnInsert.Text = "Вмъкни информация в базата";
+            btnInsert.UseVisualStyleBackColor = false;
             // 
             // btnShow
             // 
-            this.btnShow.BackColor = System.Drawing.Color.White;
-            this.btnShow.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnShow.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnShow.Location = new System.Drawing.Point(164, 359);
-            this.btnShow.Name = "btnShow";
-            this.btnShow.Size = new System.Drawing.Size(332, 109);
-            this.btnShow.TabIndex = 2;
-            this.btnShow.Text = "Show tables: films, actors and genre";
-            this.btnShow.UseVisualStyleBackColor = false;
-            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            btnShow.BackColor = Color.White;
+            btnShow.Font = new Font("Lucida Bright", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            btnShow.ForeColor = Color.FromArgb(0, 192, 192);
+            btnShow.Location = new Point(164, 359);
+            btnShow.Name = "btnShow";
+            btnShow.Size = new Size(332, 109);
+            btnShow.TabIndex = 2;
+            btnShow.Text = "Покажи таблиците: Филми, Актьори, Жанр";
+            btnShow.UseVisualStyleBackColor = false;
+            btnShow.Click += btnShow_Click;
             // 
             // btnOtherOperations
             // 
-            this.btnOtherOperations.BackColor = System.Drawing.Color.White;
-            this.btnOtherOperations.Font = new System.Drawing.Font("Lucida Bright", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnOtherOperations.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnOtherOperations.Location = new System.Drawing.Point(164, 534);
-            this.btnOtherOperations.Name = "btnOtherOperations";
-            this.btnOtherOperations.Size = new System.Drawing.Size(332, 109);
-            this.btnOtherOperations.TabIndex = 3;
-            this.btnOtherOperations.Text = "Other database operations";
-            this.btnOtherOperations.UseVisualStyleBackColor = false;
+            btnOtherOperations.BackColor = Color.White;
+            btnOtherOperations.Font = new Font("Lucida Bright", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            btnOtherOperations.ForeColor = Color.FromArgb(0, 192, 192);
+            btnOtherOperations.Location = new Point(164, 534);
+            btnOtherOperations.Name = "btnOtherOperations";
+            btnOtherOperations.Size = new Size(332, 109);
+            btnOtherOperations.TabIndex = 3;
+            btnOtherOperations.Text = "Други функционалности";
+            btnOtherOperations.UseVisualStyleBackColor = false;
             // 
             // FrmStart
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(676, 823);
-            this.Controls.Add(this.btnOtherOperations);
-            this.Controls.Add(this.btnShow);
-            this.Controls.Add(this.btnInsert);
-            this.Controls.Add(this.lblText);
-            this.Name = "FrmStart";
-            this.Text = "StartForm";
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(0, 192, 192);
+            ClientSize = new Size(776, 823);
+            Controls.Add(btnOtherOperations);
+            Controls.Add(btnShow);
+            Controls.Add(btnInsert);
+            Controls.Add(lblText);
+            Name = "FrmStart";
+            Text = "StartForm";
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion

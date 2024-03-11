@@ -12,6 +12,9 @@
 
         private ActorController actorController = new ActorController();
         private int editActorId = 0;
+        private GenreController genreController = new GenreController();
+        private int editGenreId = 0;
+
         public TablesForm()
         {
             InitializeComponent();
@@ -198,8 +201,8 @@
             Actor update = actorController.Get(id);
             txtFirstName.Text = update.FirstName;
             txtLastName.Text = update.LastName;
-            txtYears.Text = update.Years.ToString();    
-            txtDOB.Text = update.DateOfBirth;   
+            txtYears.Text = update.Years.ToString();
+            txtDOB.Text = update.DateOfBirth;
         }
         private void ToggleSaveUpdateActor()
         {
@@ -292,9 +295,120 @@
             //}
         }
 
+
+        // Genre
+        private void UpdateGridG()
+        {
+            dGVGenre.DataSource = genreController.GetAll();
+            dGVGenre.ReadOnly = true;
+            dGVGenre.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+        }
+
+        private void ClearTextBoxesG()
+        {
+            txtTitle.Text = "";
+            txtDirector.Text = "";
+            txtDOR.Text = "";
+            txtRating.Text = "";
+            txtGenreIdFilm.Text = "";
+        }
+        private void btnInsertGenre_Click(object sender, EventArgs e)
+        {
+            string name = txtGenreName.Text;
+            Genre genre = new Genre();
+            genre.Name = name;
+            genreController.Add(genre);
+            UpdateGrid();
+            ClearTextBoxes();
+        }
+
+        private void UpdateTextBoxesG(int id)
+        {
+            Genre update = genreController.Get(id);
+            txtGenreName.Text = update.Name;
+        }
+
+        private void ToggleSaveUpdateG()
+        {
+            if (btnUpdate.Visible)
+            {
+                btnSave.Visible = true;
+                btnUpdate.Visible = false;
+            }
+            else
+            {
+                btnSave.Visible = false;
+                btnUpdate.Visible = true;
+            }
+        }
+
+        private void DisableSelectG()
+        {
+            dGVGenre.Enabled = false;
+        }
+        private void btnUpdateGenre_Click(object sender, EventArgs e)
+        {
+            if (dGVGenre.SelectedRows.Count > 0)
+            {
+                var item = dGVGenre.SelectedRows[0].Cells;
+                int id = int.Parse(item[0].Value.ToString());
+                editId = id;
+                UpdateTextBoxes(id);
+                ToggleSaveUpdate();
+                DisableSelect();
+            }
+        }
+
+        private Genre GetEditedGenre()
+        {
+            Genre genre = new Genre();
+            genre.Id = editGenreId;
+            string name = txtGenreName.Text;
+            genre.Name = name;
+            return genre;
+        }
+
+        private void ResetSelectG()
+        {
+            dGVGenre.ClearSelection();
+            dGVGenre.Enabled = true;
+        }
+        private void btnSaveGenre_Click(object sender, EventArgs e)
+        {
+            Genre editedGenre = GetEditedGenre();
+            genreController.Update(editedGenre);
+            UpdateGrid();
+            ResetSelect();
+            ToggleSaveUpdate();
+        }
+
+        private void btnDeleteGenre_Click(object sender, EventArgs e)
+        {
+            if (dGVGenre.SelectedRows.Count > 0)
+            {
+                var item = dGVGenre.SelectedRows[0].Cells;
+                int id = int.Parse(item[0].Value.ToString());
+                genreController.Delete(id);
+                UpdateGrid();
+                ResetSelect();
+            }
+        }
+
         private void label1_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void lblText_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInsert_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
