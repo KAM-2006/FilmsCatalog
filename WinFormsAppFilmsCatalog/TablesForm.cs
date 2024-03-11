@@ -34,6 +34,7 @@
             txtDirector.Text = "";
             txtDOR.Text = "";
             txtRating.Text = "";
+            txtGenreIdFilm.Text = "";
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -43,12 +44,15 @@
             string dateOfReleasing = txtDOR.Text;
             double rating = 0;
             double.TryParse(txtRating.Text, out rating);
+            int genreId = 0;
+            int.TryParse(txtGenreIdFilm.Text, out genreId);
 
             Film film = new Film();
             film.Title = title;
             film.FilmDirector = director;
             film.DateOfReleasing = dateOfReleasing;
             film.Rating = rating;
+            film.GenreID = genreId;
 
             filmController.Add(film);
             UpdateGrid();
@@ -62,6 +66,7 @@
             txtDirector.Text = update.FilmDirector;
             txtDOR.Text = update.DateOfReleasing;
             txtRating.Text = update.Rating.ToString();
+            txtGenreIdFilm.Text = update.Genre.Id.ToString();
         }
 
         private void ToggleSaveUpdate()
@@ -106,11 +111,14 @@
             string dateOfReleasing = txtDOR.Text;
             double rating = 0;
             double.TryParse(txtRating.Text, out rating);
+            int genreId = 0;
+            int.TryParse(txtGenreIdFilm.Text, out genreId);
 
             film.Title = title;
             film.FilmDirector = director;
             film.DateOfReleasing = dateOfReleasing;
             film.Rating = rating;
+            film.GenreID = genreId;
 
             return film;
         }
@@ -285,7 +293,9 @@
             //}
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }
