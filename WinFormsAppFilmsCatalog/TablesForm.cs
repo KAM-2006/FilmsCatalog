@@ -196,11 +196,10 @@
         private void UpdateTextBoxesActor(int id)
         {
             Actor update = actorController.Get(id);
-            update.FirstName = txtFirstName.Text;
-            update.LastName = txtLastName.Text;
-            update.Years = int.Parse(txtYears.Text);
-            update.DateOfBirth = txtDOB.Text;
-
+            txtFirstName.Text = update.FirstName;
+            txtLastName.Text = update.LastName;
+            txtYears.Text = update.Years.ToString();    
+            txtDOB.Text = update.DateOfBirth;   
         }
         private void ToggleSaveUpdateActor()
         {
