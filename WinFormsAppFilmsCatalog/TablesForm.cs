@@ -159,8 +159,6 @@
             this.Hide();
             formStart.Show();
         }
-
-
         //Actor
         private void btnInsertActor_Click(object sender, EventArgs e)
         {
@@ -318,8 +316,8 @@
             Genre genre = new Genre();
             genre.Name = name;
             genreController.Add(genre);
-            UpdateGrid();
-            ClearTextBoxes();
+            UpdateGridG();
+            ClearTextBoxesG();
         }
 
         private void UpdateTextBoxesG(int id)
@@ -330,15 +328,15 @@
 
         private void ToggleSaveUpdateG()
         {
-            if (btnUpdate.Visible)
+            if (btnUpdateGenre.Visible)
             {
-                btnSave.Visible = true;
-                btnUpdate.Visible = false;
+                btnSaveGenre.Visible = true;
+                btnUpdateGenre.Visible = false;
             }
             else
             {
-                btnSave.Visible = false;
-                btnUpdate.Visible = true;
+                btnSaveGenre.Visible = false;
+                btnUpdateGenre.Visible = true;
             }
         }
 
@@ -353,9 +351,9 @@
                 var item = dGVGenre.SelectedRows[0].Cells;
                 int id = int.Parse(item[0].Value.ToString());
                 editId = id;
-                UpdateTextBoxes(id);
-                ToggleSaveUpdate();
-                DisableSelect();
+                UpdateTextBoxesG(id);
+                ToggleSaveUpdateG();
+                DisableSelectG();
             }
         }
 
@@ -377,9 +375,9 @@
         {
             Genre editedGenre = GetEditedGenre();
             genreController.Update(editedGenre);
-            UpdateGrid();
-            ResetSelect();
-            ToggleSaveUpdate();
+            UpdateGridG();
+            ResetSelectG();
+            ToggleSaveUpdateG();
         }
 
         private void btnDeleteGenre_Click(object sender, EventArgs e)
@@ -389,8 +387,8 @@
                 var item = dGVGenre.SelectedRows[0].Cells;
                 int id = int.Parse(item[0].Value.ToString());
                 genreController.Delete(id);
-                UpdateGrid();
-                ResetSelect();
+                UpdateGridG();
+                ResetSelectG();
             }
         }
 
