@@ -69,7 +69,7 @@
             txtDirector.Text = update.FilmDirector;
             txtDOR.Text = update.DateOfReleasing;
             txtRating.Text = update.Rating.ToString();
-            txtGenreIdFilm.Text = update.Genre.Id.ToString();
+            txtGenreIdFilm.Text = update.GenreID.ToString();
         }
 
         private void ToggleSaveUpdate()
