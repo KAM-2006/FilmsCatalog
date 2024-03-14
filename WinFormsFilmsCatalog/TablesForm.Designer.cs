@@ -747,7 +747,7 @@
             this.Controls.Add(this.lblFilmI);
             this.Controls.Add(this.lblFilmF);
             this.Name = "TablesForm";
-            this.Text = "TablesForm";
+            this.Text = "Филм, актьор и жанр";
             ((System.ComponentModel.ISupportInitialize)(this.dGVFilm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVActor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
