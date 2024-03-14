@@ -50,6 +50,7 @@
             this.lblDateOfReleasеF = new System.Windows.Forms.Label();
             this.lblRatingF = new System.Windows.Forms.Label();
             this.lblGenreIdF = new System.Windows.Forms.Label();
+            this.lblFirstNameA = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblFilmF
@@ -286,11 +287,22 @@
             this.lblGenreIdF.TabIndex = 21;
             this.lblGenreIdF.Text = "Жанр ИД:";
             // 
+            // lblFirstNameA
+            // 
+            this.lblFirstNameA.AutoSize = true;
+            this.lblFirstNameA.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblFirstNameA.Location = new System.Drawing.Point(60, 252);
+            this.lblFirstNameA.Name = "lblFirstNameA";
+            this.lblFirstNameA.Size = new System.Drawing.Size(53, 25);
+            this.lblFirstNameA.TabIndex = 22;
+            this.lblFirstNameA.Text = "Име:";
+            // 
             // TablesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1305, 716);
+            this.Controls.Add(this.lblFirstNameA);
             this.Controls.Add(this.lblGenreIdF);
             this.Controls.Add(this.lblRatingF);
             this.Controls.Add(this.lblDateOfReleasеF);
@@ -344,5 +356,6 @@
         private Label lblDateOfReleasеF;
         private Label lblRatingF;
         private Label lblGenreIdF;
+        private Label lblFirstNameA;
     }
 }
