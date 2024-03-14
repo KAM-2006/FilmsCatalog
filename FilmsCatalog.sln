@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Data", "Data\Data.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Controller", "Controller\Controller.csproj", "{ACD8B86C-A13B-4F07-ABB1-7A081E057E88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormsFilmsCatalog", "WinFormsFilmsCatalog\WinFormsFilmsCatalog.csproj", "{4C703C43-10E0-43CB-9175-EA3B38ED526C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{ACD8B86C-A13B-4F07-ABB1-7A081E057E88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ACD8B86C-A13B-4F07-ABB1-7A081E057E88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ACD8B86C-A13B-4F07-ABB1-7A081E057E88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C703C43-10E0-43CB-9175-EA3B38ED526C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C703C43-10E0-43CB-9175-EA3B38ED526C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C703C43-10E0-43CB-9175-EA3B38ED526C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C703C43-10E0-43CB-9175-EA3B38ED526C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
