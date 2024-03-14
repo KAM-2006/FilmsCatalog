@@ -85,6 +85,9 @@
             this.btnShowActors = new System.Windows.Forms.Button();
             this.btnReturnToStart = new System.Windows.Forms.Button();
             this.btnGoToOtherOperations = new System.Windows.Forms.Button();
+            this.lblTop3 = new System.Windows.Forms.Label();
+            this.Titles = new System.Windows.Forms.ListBox();
+            this.btnShowFilmsByRating = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dGVFilm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVActor)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -649,11 +652,43 @@
             this.btnGoToOtherOperations.Text = "Other Operations";
             this.btnGoToOtherOperations.UseVisualStyleBackColor = true;
             // 
+            // lblTop3
+            // 
+            this.lblTop3.AutoSize = true;
+            this.lblTop3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTop3.Location = new System.Drawing.Point(1005, 491);
+            this.lblTop3.Name = "lblTop3";
+            this.lblTop3.Size = new System.Drawing.Size(222, 25);
+            this.lblTop3.TabIndex = 57;
+            this.lblTop3.Text = "Топ 3 филма по рейтинг";
+            // 
+            // Titles
+            // 
+            this.Titles.FormattingEnabled = true;
+            this.Titles.ItemHeight = 15;
+            this.Titles.Location = new System.Drawing.Point(1005, 529);
+            this.Titles.Name = "Titles";
+            this.Titles.Size = new System.Drawing.Size(195, 154);
+            this.Titles.TabIndex = 58;
+            // 
+            // btnShowFilmsByRating
+            // 
+            this.btnShowFilmsByRating.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnShowFilmsByRating.Location = new System.Drawing.Point(1206, 529);
+            this.btnShowFilmsByRating.Name = "btnShowFilmsByRating";
+            this.btnShowFilmsByRating.Size = new System.Drawing.Size(99, 154);
+            this.btnShowFilmsByRating.TabIndex = 59;
+            this.btnShowFilmsByRating.Text = "Show";
+            this.btnShowFilmsByRating.UseVisualStyleBackColor = true;
+            // 
             // TablesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1310, 747);
+            this.Controls.Add(this.btnShowFilmsByRating);
+            this.Controls.Add(this.Titles);
+            this.Controls.Add(this.lblTop3);
             this.Controls.Add(this.btnGoToOtherOperations);
             this.Controls.Add(this.btnReturnToStart);
             this.Controls.Add(this.btnShowActors);
@@ -780,5 +815,8 @@
         private Button btnShowActors;
         private Button btnReturnToStart;
         private Button btnGoToOtherOperations;
+        private Label lblTop3;
+        private ListBox Titles;
+        private Button btnShowFilmsByRating;
     }
 }
