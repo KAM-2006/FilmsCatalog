@@ -83,8 +83,6 @@
             this.checkedListActors = new System.Windows.Forms.CheckedListBox();
             this.btnConnectFA = new System.Windows.Forms.Button();
             this.btnShowActors = new System.Windows.Forms.Button();
-            this.btnReturnToStart = new System.Windows.Forms.Button();
-            this.btnGoToOtherOperations = new System.Windows.Forms.Button();
             this.lblTop3 = new System.Windows.Forms.Label();
             this.Titles = new System.Windows.Forms.ListBox();
             this.btnShowFilmsByRating = new System.Windows.Forms.Button();
@@ -632,26 +630,6 @@
             this.btnShowActors.Text = "Show Actors";
             this.btnShowActors.UseVisualStyleBackColor = true;
             // 
-            // btnReturnToStart
-            // 
-            this.btnReturnToStart.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnReturnToStart.Location = new System.Drawing.Point(993, 700);
-            this.btnReturnToStart.Name = "btnReturnToStart";
-            this.btnReturnToStart.Size = new System.Drawing.Size(129, 35);
-            this.btnReturnToStart.TabIndex = 55;
-            this.btnReturnToStart.Text = "Start Form";
-            this.btnReturnToStart.UseVisualStyleBackColor = true;
-            // 
-            // btnGoToOtherOperations
-            // 
-            this.btnGoToOtherOperations.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGoToOtherOperations.Location = new System.Drawing.Point(1128, 700);
-            this.btnGoToOtherOperations.Name = "btnGoToOtherOperations";
-            this.btnGoToOtherOperations.Size = new System.Drawing.Size(177, 35);
-            this.btnGoToOtherOperations.TabIndex = 56;
-            this.btnGoToOtherOperations.Text = "Other Operations";
-            this.btnGoToOtherOperations.UseVisualStyleBackColor = true;
-            // 
             // lblTop3
             // 
             this.lblTop3.AutoSize = true;
@@ -689,8 +667,6 @@
             this.Controls.Add(this.btnShowFilmsByRating);
             this.Controls.Add(this.Titles);
             this.Controls.Add(this.lblTop3);
-            this.Controls.Add(this.btnGoToOtherOperations);
-            this.Controls.Add(this.btnReturnToStart);
             this.Controls.Add(this.btnShowActors);
             this.Controls.Add(this.btnConnectFA);
             this.Controls.Add(this.checkedListActors);
@@ -813,8 +789,6 @@
         private CheckedListBox checkedListActors;
         private Button btnConnectFA;
         private Button btnShowActors;
-        private Button btnReturnToStart;
-        private Button btnGoToOtherOperations;
         private Label lblTop3;
         private ListBox Titles;
         private Button btnShowFilmsByRating;

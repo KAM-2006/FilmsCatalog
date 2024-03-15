@@ -42,18 +42,16 @@
             this.txtGenre = new System.Windows.Forms.TextBox();
             this.btnShowFilmsByGenre = new System.Windows.Forms.Button();
             this.FilmsOfGenre = new System.Windows.Forms.ListBox();
-            this.btnStartFormReturn = new System.Windows.Forms.Button();
-            this.btnGoToTablesForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblTitleFilm
             // 
             this.lblTitleFilm.AutoSize = true;
-            this.lblTitleFilm.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblTitleFilm.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblTitleFilm.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblTitleFilm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.lblTitleFilm.Location = new System.Drawing.Point(12, 20);
             this.lblTitleFilm.Name = "lblTitleFilm";
-            this.lblTitleFilm.Size = new System.Drawing.Size(234, 25);
+            this.lblTitleFilm.Size = new System.Drawing.Size(243, 25);
             this.lblTitleFilm.TabIndex = 0;
             this.lblTitleFilm.Text = "Въведи заглавие на филм";
             // 
@@ -67,7 +65,7 @@
             // btnFilmInfo
             // 
             this.btnFilmInfo.BackColor = System.Drawing.Color.White;
-            this.btnFilmInfo.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnFilmInfo.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnFilmInfo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnFilmInfo.Location = new System.Drawing.Point(283, 20);
             this.btnFilmInfo.Name = "btnFilmInfo";
@@ -88,22 +86,22 @@
             // lblFirstNameА
             // 
             this.lblFirstNameА.AutoSize = true;
-            this.lblFirstNameА.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblFirstNameА.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblFirstNameА.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblFirstNameА.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.lblFirstNameА.Location = new System.Drawing.Point(12, 182);
             this.lblFirstNameА.Name = "lblFirstNameА";
-            this.lblFirstNameА.Size = new System.Drawing.Size(204, 25);
+            this.lblFirstNameА.Size = new System.Drawing.Size(209, 25);
             this.lblFirstNameА.TabIndex = 4;
             this.lblFirstNameА.Text = "Въведи име на актьор";
             // 
             // lblLastNameA
             // 
             this.lblLastNameA.AutoSize = true;
-            this.lblLastNameA.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblLastNameA.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblLastNameA.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblLastNameA.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.lblLastNameA.Location = new System.Drawing.Point(12, 245);
             this.lblLastNameA.Name = "lblLastNameA";
-            this.lblLastNameA.Size = new System.Drawing.Size(248, 25);
+            this.lblLastNameA.Size = new System.Drawing.Size(255, 25);
             this.lblLastNameA.TabIndex = 5;
             this.lblLastNameA.Text = "Въведи фамилия на актьор";
             // 
@@ -124,7 +122,7 @@
             // btnShowFilmsByActor
             // 
             this.btnShowFilmsByActor.BackColor = System.Drawing.Color.White;
-            this.btnShowFilmsByActor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnShowFilmsByActor.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnShowFilmsByActor.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnShowFilmsByActor.Location = new System.Drawing.Point(283, 245);
             this.btnShowFilmsByActor.Name = "btnShowFilmsByActor";
@@ -145,11 +143,11 @@
             // lblGenre
             // 
             this.lblGenre.AutoSize = true;
-            this.lblGenre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblGenre.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.lblGenre.Font = new System.Drawing.Font("Segoe UI Semibold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGenre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.lblGenre.Location = new System.Drawing.Point(12, 489);
             this.lblGenre.Name = "lblGenre";
-            this.lblGenre.Size = new System.Drawing.Size(126, 25);
+            this.lblGenre.Size = new System.Drawing.Size(130, 25);
             this.lblGenre.TabIndex = 10;
             this.lblGenre.Text = "Въведи жанр";
             // 
@@ -163,7 +161,7 @@
             // btnShowFilmsByGenre
             // 
             this.btnShowFilmsByGenre.BackColor = System.Drawing.Color.White;
-            this.btnShowFilmsByGenre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btnShowFilmsByGenre.Font = new System.Drawing.Font("Lucida Bright", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.btnShowFilmsByGenre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnShowFilmsByGenre.Location = new System.Drawing.Point(283, 489);
             this.btnShowFilmsByGenre.Name = "btnShowFilmsByGenre";
@@ -181,38 +179,12 @@
             this.FilmsOfGenre.Size = new System.Drawing.Size(401, 109);
             this.FilmsOfGenre.TabIndex = 13;
             // 
-            // btnStartFormReturn
-            // 
-            this.btnStartFormReturn.BackColor = System.Drawing.Color.White;
-            this.btnStartFormReturn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnStartFormReturn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnStartFormReturn.Location = new System.Drawing.Point(165, 706);
-            this.btnStartFormReturn.Name = "btnStartFormReturn";
-            this.btnStartFormReturn.Size = new System.Drawing.Size(112, 37);
-            this.btnStartFormReturn.TabIndex = 14;
-            this.btnStartFormReturn.Text = "Start Form";
-            this.btnStartFormReturn.UseVisualStyleBackColor = false;
-            // 
-            // btnGoToTablesForm
-            // 
-            this.btnGoToTablesForm.BackColor = System.Drawing.Color.White;
-            this.btnGoToTablesForm.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnGoToTablesForm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnGoToTablesForm.Location = new System.Drawing.Point(283, 706);
-            this.btnGoToTablesForm.Name = "btnGoToTablesForm";
-            this.btnGoToTablesForm.Size = new System.Drawing.Size(130, 37);
-            this.btnGoToTablesForm.TabIndex = 15;
-            this.btnGoToTablesForm.Text = "Tables Form";
-            this.btnGoToTablesForm.UseVisualStyleBackColor = false;
-            // 
             // AdditionalForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.ClientSize = new System.Drawing.Size(430, 755);
-            this.Controls.Add(this.btnGoToTablesForm);
-            this.Controls.Add(this.btnStartFormReturn);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.ClientSize = new System.Drawing.Size(430, 749);
             this.Controls.Add(this.FilmsOfGenre);
             this.Controls.Add(this.btnShowFilmsByGenre);
             this.Controls.Add(this.txtGenre);
@@ -250,7 +222,5 @@
         private TextBox txtGenre;
         private Button btnShowFilmsByGenre;
         private ListBox FilmsOfGenre;
-        private Button btnStartFormReturn;
-        private Button btnGoToTablesForm;
     }
 }
