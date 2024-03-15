@@ -3,6 +3,19 @@
     using System.ComponentModel.DataAnnotations;
     public class Film
     {
+        public Film()
+        {
+
+        }
+        public Film(string title, string filmDirector, string dateOfReleasing, 
+            double rating, int genreId)
+        {
+            this.Title = title;
+            this.FilmDirector = filmDirector;
+            this.DateOfReleasing = dateOfReleasing; 
+            this.Rating = rating;
+            this.GenreID = genreId;
+        }
         [Key]
         public int Id { get; set; }
         [Required]

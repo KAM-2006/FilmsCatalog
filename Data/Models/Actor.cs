@@ -3,6 +3,17 @@
     using System.ComponentModel.DataAnnotations;
     public class Actor
     {
+        public Actor()
+        {
+
+        }
+        public Actor(string firstName, string lastName, int years, string DOB)
+        {
+            this.FirstName = firstName; 
+            this.LastName = lastName;
+            this.Years = years;
+            this.DateOfBirth = DOB;
+        }
         [Key]
         public int Id { get; set; }
         [Required]
