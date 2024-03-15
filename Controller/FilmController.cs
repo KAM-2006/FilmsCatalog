@@ -64,16 +64,16 @@
             }
         }
         private ActorController actorController = new ActorController();
-        public string SortByrating(List<Film> films)
+        public List<string> SortByrating(List<Film> films)
         {
-            StringBuilder sb = new StringBuilder();
+            List<string> result = new List<string>(); 
             List<Film> sortedfilms = new List<Film>();
             sortedfilms = films.OrderByDescending(x => x.Rating).ToList();
             for (int i = 0; i < 3; i++)
             {
-                sb.AppendLine(sortedfilms[i].Title + " " + sortedfilms[i].Rating);
+                result.Add(sortedfilms[i].Title + " " + sortedfilms[i].Rating);
             }
-            return sb.ToString().TrimEnd();
+            return result;
         }
         //информация да излиза за един филм по зададено заглавие
         public string SearchInfFilm(List<Film> films, string title)
@@ -103,9 +103,9 @@
             return sb.ToString().TrimEnd();
         }
         //търсене на филмите по зададен актьор
-        public string SearchInfFilmByActor(List<Film> films, string firstname, string lastname)
+        public List <string> SearchInfFilmByActor(List<Film> films, string firstname, string lastname)
         {
-            StringBuilder sb = new StringBuilder();
+            List<string> result = new List<string>();
             int id = actorController.GetByName(firstname, lastname);
             foreach (var film in films)
             {
@@ -117,24 +117,37 @@
                     {
                         if (f.Id == filmActor.FilmId)
                         {
-                            sb.AppendLine(f.Title);
+                            result.Add(f.Title);
                         }
                     }
                 }
             }
-            return sb.ToString().TrimEnd();
+            return result;
         }
-        public string SearchInfByGenre(List<Film> films, string genreName)
+        public List <string> SearchInfByGenre(List<Film> films, string genreName)
         {
-            StringBuilder sb = new StringBuilder();
+            List<string> result = new List<string>();
             foreach (var film in films)
             {
                 if (film.Genre.Name == genreName)
                 {
-                    sb.AppendLine(film.Title);
+                   result.Add(film.Title);
                 }
             }
-            return sb.ToString().TrimEnd();
+            return result;
+        }
+        public int GetByName(string title)
+        {
+            List<Film> films = this.GetAll();
+            int id = 0;
+            foreach (Film film in films)
+            {
+                if (film.Title == title)
+                {
+                    id = film.Id;
+                }
+            }
+            return id;
         }
     }
 }

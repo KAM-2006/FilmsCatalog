@@ -58,5 +58,18 @@ namespace Controller
                 }
             }
         }
+        public int GetByName(string name)
+        {
+            List<Genre> genres = this.GetAll();
+            int id = 0;
+            foreach (Genre genre in genres)
+            {
+                if (genre.Name == name)
+                {
+                    id = genre.Id;
+                }
+            }
+            return id;
+        }
     }
 }
