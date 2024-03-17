@@ -1,6 +1,8 @@
 ﻿namespace WinFormsFilmsCatalog
 {
     using Controller;
+    using Data.Models;
+
     public partial class AdditionalForm : Form
     {
         private FilmController filmController = new FilmController();
@@ -32,6 +34,14 @@
             }
             txtFirstNameA.Text = "";
             txtLastNameA.Text = "";
+        }
+
+        private void btnFilmInfo_Click(object sender, EventArgs e)
+        {
+            string title = txtTitleFilm.Text;
+            List<Film> films = filmController.GetAll();
+            lblFilmInfo.Text = filmController.SearchInfFilm(films, title);
+            txtTitleFilm.Text = "";
         }
     }
 }

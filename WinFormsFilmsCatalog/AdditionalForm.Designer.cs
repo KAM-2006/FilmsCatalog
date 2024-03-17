@@ -73,6 +73,7 @@
             this.btnFilmInfo.TabIndex = 2;
             this.btnFilmInfo.Text = "Show Film Info";
             this.btnFilmInfo.UseVisualStyleBackColor = false;
+            this.btnFilmInfo.Click += new System.EventHandler(this.btnFilmInfo_Click);
             // 
             // lblFilmInfo
             // 
