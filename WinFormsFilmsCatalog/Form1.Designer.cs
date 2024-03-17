@@ -69,6 +69,7 @@
             this.btnShow.TabIndex = 2;
             this.btnShow.Text = "Покажи таблиците: Филми, Актьори, Жанр";
             this.btnShow.UseVisualStyleBackColor = false;
+            this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
             // 
             // btnOtherOperations
             // 
@@ -81,6 +82,7 @@
             this.btnOtherOperations.TabIndex = 3;
             this.btnOtherOperations.Text = "Други функционалности";
             this.btnOtherOperations.UseVisualStyleBackColor = false;
+            this.btnOtherOperations.Click += new System.EventHandler(this.btnOtherOperations_Click);
             // 
             // Form1
             // 

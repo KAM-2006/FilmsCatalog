@@ -5,13 +5,15 @@ namespace WinFormsFilmsCatalog
     public partial class Form1 : Form
     {
         public TablesForm tablesForm;
-        public AdditionalForm formAdditional;
+        public AdditionalForm additionalForm;
         private FilmController filmController = new FilmController();
         private GenreController genreController = new GenreController();
         private ActorController actorController = new ActorController();
         public Form1()
         {
             InitializeComponent();
+            tablesForm = new TablesForm();
+            additionalForm = new AdditionalForm();
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -186,6 +188,16 @@ namespace WinFormsFilmsCatalog
             Film filmEleven = new Film("Scream VI", "Tyler Gillett", "3/10/2023", 6.5, 4);
             filmController.Add(filmEleven);
 
+        }
+
+        private void btnShow_Click(object sender, EventArgs e)
+        {
+            tablesForm.ShowDialog();
+        }
+
+        private void btnOtherOperations_Click(object sender, EventArgs e)
+        {
+            additionalForm.Show();
         }
     }
 }

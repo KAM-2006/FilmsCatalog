@@ -130,6 +130,7 @@
             this.btnShowFilmsByActor.TabIndex = 8;
             this.btnShowFilmsByActor.Text = "Show Films";
             this.btnShowFilmsByActor.UseVisualStyleBackColor = false;
+            this.btnShowFilmsByActor.Click += new System.EventHandler(this.btnShowFilmsByActor_Click);
             // 
             // FilmsOfActors
             // 
