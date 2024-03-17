@@ -464,6 +464,7 @@
             this.btnInsertGenre.TabIndex = 37;
             this.btnInsertGenre.Text = "Insert";
             this.btnInsertGenre.UseVisualStyleBackColor = true;
+            this.btnInsertGenre.Click += new System.EventHandler(this.btnInsertGenre_Click);
             // 
             // btnSaveGenre
             // 
@@ -474,16 +475,18 @@
             this.btnSaveGenre.TabIndex = 38;
             this.btnSaveGenre.Text = "Save";
             this.btnSaveGenre.UseVisualStyleBackColor = true;
+            this.btnSaveGenre.Click += new System.EventHandler(this.btnSaveGenre_Click);
             // 
             // btnUpdateGenre
             // 
             this.btnUpdateGenre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdateGenre.Location = new System.Drawing.Point(218, 640);
+            this.btnUpdateGenre.Location = new System.Drawing.Point(218, 685);
             this.btnUpdateGenre.Name = "btnUpdateGenre";
             this.btnUpdateGenre.Size = new System.Drawing.Size(91, 30);
             this.btnUpdateGenre.TabIndex = 39;
             this.btnUpdateGenre.Text = "Update";
             this.btnUpdateGenre.UseVisualStyleBackColor = true;
+            this.btnUpdateGenre.Click += new System.EventHandler(this.btnUpdateGenre_Click);
             // 
             // btnDeleteGenre
             // 
@@ -494,6 +497,7 @@
             this.btnDeleteGenre.TabIndex = 40;
             this.btnDeleteGenre.Text = "Delete";
             this.btnDeleteGenre.UseVisualStyleBackColor = true;
+            this.btnDeleteGenre.Click += new System.EventHandler(this.btnDeleteGenre_Click);
             // 
             // btnInsertFilm
             // 
@@ -528,7 +532,7 @@
             // btnUpdateFilm
             // 
             this.btnUpdateFilm.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdateFilm.Location = new System.Drawing.Point(468, 86);
+            this.btnUpdateFilm.Location = new System.Drawing.Point(468, 122);
             this.btnUpdateFilm.Name = "btnUpdateFilm";
             this.btnUpdateFilm.Size = new System.Drawing.Size(91, 30);
             this.btnUpdateFilm.TabIndex = 44;
@@ -568,7 +572,7 @@
             // btnUpdateActor
             // 
             this.btnUpdateActor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdateActor.Location = new System.Drawing.Point(468, 346);
+            this.btnUpdateActor.Location = new System.Drawing.Point(468, 393);
             this.btnUpdateActor.Name = "btnUpdateActor";
             this.btnUpdateActor.Size = new System.Drawing.Size(91, 30);
             this.btnUpdateActor.TabIndex = 48;
@@ -658,6 +662,7 @@
             this.btnShowFilmsByRating.TabIndex = 59;
             this.btnShowFilmsByRating.Text = "Show";
             this.btnShowFilmsByRating.UseVisualStyleBackColor = true;
+            this.btnShowFilmsByRating.Click += new System.EventHandler(this.btnShowFilmsByRating_Click);
             // 
             // TablesForm
             // 
