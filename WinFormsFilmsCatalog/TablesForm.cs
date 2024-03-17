@@ -374,5 +374,65 @@
                 ResetSelect();
             }
         }
+
+        //FilmActor
+
+        private void btnShowActors_Click(object sender, EventArgs e)
+        {
+            List<Actor> actors = actorController.GetAll();
+            foreach (Actor actor in actors)
+            {
+                string fullName = actor.FirstName + " " + actor.LastName;
+                checkedListActors.Items.Add(fullName);
+            }
+        }
+
+        private int FindId(string fullName)
+        {
+            string[] arr = fullName.Split(' ').ToArray();
+            string firstName = arr[0];
+            string lastName = arr[1];
+            List<Actor> actors = actorController.GetAll();
+            foreach (Actor actor in actors)
+            {
+                if (actor.FirstName == firstName && actor.LastName == lastName)
+                {
+                    return actor.Id;
+                }
+            }
+            return 0;
+        }
+
+        private void btnConnectFA_Click(object sender, EventArgs e)
+        {
+            int filmId = 0;
+            int actorId = 0;
+            if (dGVActor.SelectedRows.Count > 0)
+            {
+                var item = dGVActor.SelectedRows[0].Cells;
+                int id = int.Parse(item[0].Value.ToString());
+                filmId = id;
+                ResetSelectActor();
+            }
+            foreach (var item in checkedListActors.CheckedItems)
+            {
+                actorId = FindId(item.ToString());
+                FilmActor filmActor = new FilmActor(filmId, actorId);
+                filmController.AddActorFilm(filmActor);
+
+            }
+        }
+
+        private void TablesForm_Load(object sender, EventArgs e)
+        {
+            UpdateGrid();
+            ClearTextBoxes();
+
+            UpdateGridG();
+            ClearTextBoxesG();
+
+            UpdateGridActor();
+            ClearTextBoxesActor();
+        }
     }
 }

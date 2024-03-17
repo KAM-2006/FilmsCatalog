@@ -20,6 +20,9 @@ namespace WinFormsFilmsCatalog
             Actors();
             Films();
             FilmsActors();
+            tablesForm.UpdateGrid();
+            tablesForm.UpdateGridG();
+            tablesForm.UpdateGridActor();
         }
 
         private void Genres()

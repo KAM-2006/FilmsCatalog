@@ -631,6 +631,7 @@
             this.btnConnectFA.TabIndex = 53;
             this.btnConnectFA.Text = "Connect";
             this.btnConnectFA.UseVisualStyleBackColor = true;
+            this.btnConnectFA.Click += new System.EventHandler(this.btnConnectFA_Click);
             // 
             // btnShowActors
             // 
@@ -641,6 +642,7 @@
             this.btnShowActors.TabIndex = 54;
             this.btnShowActors.Text = "Show Actors";
             this.btnShowActors.UseVisualStyleBackColor = true;
+            this.btnShowActors.Click += new System.EventHandler(this.btnShowActors_Click);
             // 
             // lblTop3
             // 
@@ -737,6 +739,7 @@
             this.Controls.Add(this.lblFilmF);
             this.Name = "TablesForm";
             this.Text = "Филм, актьор и жанр";
+            this.Load += new System.EventHandler(this.TablesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dGVFilm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dGVActor)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
