@@ -85,6 +85,7 @@
             UpdateGridG();
             ResetSelectG();
             ToggleSaveUpdateG();
+            ClearTextBoxesG();
         }
 
         private Genre GetEditedGenre()
@@ -116,10 +117,11 @@
 
         private void btnShowFilmsByRating_Click(object sender, EventArgs e)
         {
+            Titles.Items.Clear();
             List<string> result = filmController.SortByrating(filmController.GetAll());
-            for (int i = 0; i < result.Count; i++)
+            foreach (var item in result)
             {
-                Titles.Items[i] = result[i];
+                Titles.Items.Add(item);
             }
         }
 
@@ -230,6 +232,7 @@
             UpdateGridActor();
             ResetSelectActor();
             ToggleSaveUpdateActor();
+            ClearTextBoxesActor();
         }
 
         private void btnDeleteActor_Click(object sender, EventArgs e)
@@ -361,6 +364,7 @@
             UpdateGrid();
             ResetSelect();
             ToggleSaveUpdate();
+            ClearTextBoxes();
         }
 
         private void btnDeleteFilm_Click(object sender, EventArgs e)
@@ -379,6 +383,7 @@
 
         private void btnShowActors_Click(object sender, EventArgs e)
         {
+            checkedListActors.Items.Clear();
             List<Actor> actors = actorController.GetAll();
             foreach (Actor actor in actors)
             {
@@ -405,6 +410,7 @@
 
         private void btnConnectFA_Click(object sender, EventArgs e)
         {
+
             int filmId = 0;
             int actorId = 0;
             if (dGVActor.SelectedRows.Count > 0)
