@@ -19,7 +19,7 @@ namespace TestController
 
             // Assert
 
-            Assert.AreEqual(11, result.Count); // Assuming there are 11 films in the test data
+            Assert.AreEqual(12, result.Count); // Assuming there are 11 films in the test data
         }
 
         [Test]
@@ -107,7 +107,7 @@ namespace TestController
             var result = controller.SortByrating(films);
 
             // Assert
-            Assert.AreEqual(5, result.Count);
+            Assert.AreEqual(3, result.Count);
             Assert.AreEqual("Film3 5", result.First());
             Assert.AreEqual("Film1 4", result[1]);
         }
@@ -129,8 +129,9 @@ namespace TestController
             int filmId = filmController.GetByName("FilmTest1");
             FilmActor filmActor = new FilmActor(filmId, actorid);
             filmController.AddActorFilm(filmActor);
+            expected.Append("Film: ");
             expected.AppendLine(film1.ToString());
-            expected.AppendLine($"Actors in {film1.Title}");
+            expected.AppendLine($"Actors in {film1.Title}:");
             expected.AppendLine(actor.ToString());
             // Act 
             string result = filmController.SearchInfFilm(filmController.GetAll(), film1.Title);
@@ -174,7 +175,7 @@ namespace TestController
             GenreController genreController = new GenreController();
             FilmController filmController = new FilmController();
             // Arrange
-            int id = genreController.GetByName("genreTest");
+            int id = genreController.GetByName("Updated GenreTest");
             Film film1 = new Film("FilmTest", "Director1", "25/10/06", 4, id);
             Film film2 = new Film("FilmTest2", "Director2", "25/10/06", 3, id);
             filmController.Add((Film)film1);

@@ -29,7 +29,7 @@
 
         public override string ToString()
         {
-            return $"{this.Title} - {this.FilmDirector}, {this.DateOfReleasing}, {this.Rating}/10 {this.Genre.Name}.";
+            return $"{this.Title} - {this.FilmDirector}, {this.DateOfReleasing}, {this.Rating}/10 {this.GenreID}.";
         }
     }
 }

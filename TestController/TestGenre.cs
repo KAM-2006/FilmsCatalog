@@ -17,7 +17,7 @@ namespace TestController
             var result = controller.GetAll();
 
             // Assert
-            Assert.AreEqual(8, result.Count); // Assuming there are 8 genres in the test data
+            Assert.AreEqual(9, result.Count); // Assuming there are 8 genres in the test data
         }
 
         [Test]

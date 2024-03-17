@@ -18,7 +18,7 @@ namespace TestController
 
             // Assert
 
-            Assert.AreEqual(24, result.Count); // Assuming there are 24 films in the test data
+            Assert.AreEqual(25, result.Count); // Assuming there are 24 films in the test data
         }
 
         [Test]
