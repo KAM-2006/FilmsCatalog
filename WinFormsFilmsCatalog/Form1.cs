@@ -16,7 +16,10 @@ namespace WinFormsFilmsCatalog
 
         private void btnInsert_Click(object sender, EventArgs e)
         {
-
+            Genres();
+            Actors();
+            Films();
+            FilmsActors();
         }
 
         private void Genres()
