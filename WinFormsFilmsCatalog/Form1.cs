@@ -154,5 +154,32 @@ namespace WinFormsFilmsCatalog
             FilmActor filmElevenActorTwo = new FilmActor(11, 24);
             filmController.AddActorFilm(filmElevenActorTwo);
         }
+
+        private void Films()
+        {
+            Film filmOne = new Film("Spider-Man: No Way Home", "Jon Watts", "12/17/2021", 8.2, 1);
+            filmController.Add(filmOne);
+            Film filmTwo = new Film("Anyone But You", "Will Gluck", "12/22/2023", 6.3, 9);
+            filmController.Add(filmTwo);
+            Film filmThree = new Film("Madame Web", "S.J.Glarkson", "2/14/2024", 3.7, 1);
+            filmController.Add(filmThree);
+            Film filmFour = new Film("Last Call", "Ivaylo Penchev", "6/4/2021", 7.8, 9);
+            filmController.Add(filmFour);
+            Film filmFive = new Film("Guardians of the Galaxy Vol. 3", "James Gunn", "5/5/2023", 7.9, 1);
+            filmController.Add(filmFive);
+            Film filmSix = new Film("Avengers: Infinity War", "Joe Russo", "4/27/2018", 8.4, 8);
+            filmController.Add(filmSix);
+            Film filmSeven = new Film("Sherlok Holmes", "Guy Ritchie", "1/1/2010", 7.6, 4);
+            filmController.Add(filmSeven);
+            Film filmEight = new Film("10 things I hate you about you", "Gil Junger", "3/31/1999", 7.3, 2);
+            filmController.Add(filmEight);
+            Film filmNine = new Film("Oppenheimer", "Christopher Nolan", "7/21/2023", 8.4, 5);
+            filmController.Add(filmNine);
+            Film filmTen = new Film("Hachi: A Dog's Tale", "Lasse Hallstrom", "3/12/2010", 8.1, 6);
+            filmController.Add(filmTen);
+            Film filmEleven = new Film("Scream VI", "Tyler Gillett", "3/10/2023", 6.5, 4);
+            filmController.Add(filmEleven);
+
+        }
     }
 }
