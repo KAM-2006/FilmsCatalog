@@ -43,5 +43,28 @@
             lblFilmInfo.Text = filmController.SearchInfFilm(films, title);
             txtTitleFilm.Text = "";
         }
+
+        private void btnShowFilmsByGenre_Click(object sender, EventArgs e)
+        {
+            FilmsOfGenre.Items.Clear();
+            string name = txtGenre.Text;
+            List<string> result = filmController.SearchInfByGenre(filmController.GetAll(), name);
+            if (result.Count == 0)
+            {
+                MessageBox.Show("Няма данни за този жанр.");
+            }
+            else
+            {
+                foreach (var item in result)
+                {
+                    FilmsOfGenre.Items.Add(item);
+                }
+                if (FilmsOfGenre.Items.Count == 0)
+                {
+                    MessageBox.Show("Няма филми с този жанр.");
+                }
+            }
+            txtGenre.Text = "";
+        }
     }
 }

@@ -171,6 +171,7 @@
             this.btnShowFilmsByGenre.TabIndex = 12;
             this.btnShowFilmsByGenre.Text = "Show Films";
             this.btnShowFilmsByGenre.UseVisualStyleBackColor = false;
+            this.btnShowFilmsByGenre.Click += new System.EventHandler(this.btnShowFilmsByGenre_Click);
             // 
             // FilmsOfGenre
             // 

@@ -480,7 +480,7 @@
             // btnUpdateGenre
             // 
             this.btnUpdateGenre.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdateGenre.Location = new System.Drawing.Point(218, 685);
+            this.btnUpdateGenre.Location = new System.Drawing.Point(218, 640);
             this.btnUpdateGenre.Name = "btnUpdateGenre";
             this.btnUpdateGenre.Size = new System.Drawing.Size(91, 30);
             this.btnUpdateGenre.TabIndex = 39;
@@ -524,7 +524,7 @@
             // btnSaveFilm
             // 
             this.btnSaveFilm.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnSaveFilm.Location = new System.Drawing.Point(468, 84);
+            this.btnSaveFilm.Location = new System.Drawing.Point(468, 91);
             this.btnSaveFilm.Name = "btnSaveFilm";
             this.btnSaveFilm.Size = new System.Drawing.Size(91, 30);
             this.btnSaveFilm.TabIndex = 43;
@@ -535,7 +535,7 @@
             // btnUpdateFilm
             // 
             this.btnUpdateFilm.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdateFilm.Location = new System.Drawing.Point(468, 122);
+            this.btnUpdateFilm.Location = new System.Drawing.Point(468, 91);
             this.btnUpdateFilm.Name = "btnUpdateFilm";
             this.btnUpdateFilm.Size = new System.Drawing.Size(91, 30);
             this.btnUpdateFilm.TabIndex = 44;
@@ -579,7 +579,7 @@
             // btnUpdateActor
             // 
             this.btnUpdateActor.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.btnUpdateActor.Location = new System.Drawing.Point(468, 393);
+            this.btnUpdateActor.Location = new System.Drawing.Point(468, 346);
             this.btnUpdateActor.Name = "btnUpdateActor";
             this.btnUpdateActor.Size = new System.Drawing.Size(91, 30);
             this.btnUpdateActor.TabIndex = 48;
