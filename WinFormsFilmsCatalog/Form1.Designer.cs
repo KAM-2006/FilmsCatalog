@@ -56,6 +56,7 @@
             this.btnInsert.TabIndex = 1;
             this.btnInsert.Text = "Вмъкни информация в базата";
             this.btnInsert.UseVisualStyleBackColor = false;
+            this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnShow
             // 
