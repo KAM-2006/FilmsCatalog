@@ -9,6 +9,84 @@ namespace TestController
     public class TestFilm
     {
         [Test]
+        public void GetAll_ReturnsAllFilms()
+        {
+            // Arrange
+            var controller = new FilmController();
+
+            // Act
+            var result = controller.GetAll();
+
+            // Assert
+
+            Assert.AreEqual(11, result.Count); // Assuming there are 11 films in the test data
+        }
+
+        [Test]
+        public void Get_ReturnsFilmById()
+        {
+            // Arrange
+            var controller = new FilmController();
+            int id = 4;
+
+            // Act
+            var result = controller.Get(id);
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.AreEqual(id, result.Id);
+        }
+
+        [Test]
+        public void Add_AddsNewFilm()
+        {
+            // Arrange
+            FilmController controller = new FilmController();
+            Film newFilm = new Film("New Film", "Director", "468486", 5, 2);
+            Film newFilm2 = new Film("New Film2", "Director2", "324568", 6, 5);
+            // Act
+            controller.Add(newFilm);
+            controller.Add(newFilm2);
+            int id = controller.GetByName(newFilm.Title);
+            var result = controller.Get(id);
+            //Assert
+
+            Assert.AreEqual("New Film", result.Title);
+        }
+
+        [Test]
+        public void Update_UpdatesExistingFilm()
+        {
+            // Arrange
+            var controller = new FilmController();
+            int id = controller.GetByName("New Film");
+            var filmToUpdate = controller.Get(id);
+            filmToUpdate.Title = "Updated Film";
+
+            // Act
+            controller.Update(filmToUpdate);
+            var result = controller.Get(id);
+
+            // Assert
+            Assert.AreEqual("Updated Film", result.Title);
+        }
+
+        [Test]
+        public void Delete_RemovesFilmById()
+        {
+            // Arrange
+            var controller = new FilmController();
+            int id = controller.GetByName("New Film2");
+
+            // Act
+            controller.Delete(id);
+            var result = controller.Get(id);
+
+            // Assert
+            Assert.Null(result);
+        }
+
+        [Test]
         public void SortByRating_ReturnsTopFiveFilmsByRating()
         {
             // Arrange
