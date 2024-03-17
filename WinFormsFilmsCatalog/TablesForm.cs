@@ -413,9 +413,9 @@
 
             int filmId = 0;
             int actorId = 0;
-            if (dGVActor.SelectedRows.Count > 0)
+            if (dGVFilm.SelectedRows.Count > 0)
             {
-                var item = dGVActor.SelectedRows[0].Cells;
+                var item = dGVFilm.SelectedRows[0].Cells;
                 int id = int.Parse(item[0].Value.ToString());
                 filmId = id;
                 ResetSelectActor();
