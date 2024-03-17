@@ -508,6 +508,7 @@
             this.btnInsertFilm.TabIndex = 41;
             this.btnInsertFilm.Text = "Insert";
             this.btnInsertFilm.UseVisualStyleBackColor = true;
+            this.btnInsertFilm.Click += new System.EventHandler(this.btnInsertFilm_Click);
             // 
             // btnInsertActor
             // 
@@ -529,6 +530,7 @@
             this.btnSaveFilm.TabIndex = 43;
             this.btnSaveFilm.Text = "Save";
             this.btnSaveFilm.UseVisualStyleBackColor = true;
+            this.btnSaveFilm.Click += new System.EventHandler(this.btnSaveFilm_Click);
             // 
             // btnUpdateFilm
             // 
@@ -539,6 +541,7 @@
             this.btnUpdateFilm.TabIndex = 44;
             this.btnUpdateFilm.Text = "Update";
             this.btnUpdateFilm.UseVisualStyleBackColor = true;
+            this.btnUpdateFilm.Click += new System.EventHandler(this.btnUpdateFilm_Click);
             // 
             // btnDeleteFilm
             // 
@@ -549,6 +552,7 @@
             this.btnDeleteFilm.TabIndex = 45;
             this.btnDeleteFilm.Text = "Delete";
             this.btnDeleteFilm.UseVisualStyleBackColor = true;
+            this.btnDeleteFilm.Click += new System.EventHandler(this.btnDeleteFilm_Click);
             // 
             // btnSaveActor
             // 

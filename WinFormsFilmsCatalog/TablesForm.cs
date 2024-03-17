@@ -243,5 +243,136 @@
                 ResetSelectActor();
             }
         }
+
+        //Film
+
+        public void UpdateGrid()
+        {
+            dGVFilm.DataSource = filmController.GetAll();
+            dGVFilm.ReadOnly = true;
+            dGVFilm.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dGVFilm.Columns.Remove("Genre");
+            dGVFilm.Columns.Remove("FilmsActors");
+        }
+
+        private void ClearTextBoxes()
+        {
+            txtTitle.Text = "";
+            txtDirectorF.Text = "";
+            txtDateOfReleasingF.Text = "";
+            txtRatingF.Text = "";
+            txtGenreIdF.Text = "";
+        }
+
+        private void btnInsertFilm_Click(object sender, EventArgs e)
+        {
+            string title = txtTitle.Text;
+            string director = txtDirectorF.Text;
+            string dateOfReleasing = txtDateOfReleasingF.Text;
+            double rating = 0;
+            double.TryParse(txtRatingF.Text, out rating);
+            int filmGenreId = 0;
+            int.TryParse(txtGenreIdF.Text, out filmGenreId);
+
+            Film film = new Film();
+            film.Title = title;
+            film.FilmDirector = director;
+            film.DateOfReleasing = dateOfReleasing;
+            film.Rating = rating;
+            film.GenreID = filmGenreId;
+
+            filmController.Add(film);
+            UpdateGrid();
+            ClearTextBoxes();
+        }
+        private void UpdateTextBoxes(int id)
+        {
+            Film update = filmController.Get(id);
+            txtTitle.Text = update.Title;
+            txtDirectorF.Text = update.FilmDirector;
+            txtDateOfReleasingF.Text = update.DateOfReleasing;
+            txtRatingF.Text = update.Rating.ToString();
+            txtGenreIdF.Text = update.GenreID.ToString();
+        }
+
+        private void ToggleSaveUpdate()
+        {
+            if (btnUpdateFilm.Visible)
+            {
+                btnSaveFilm.Visible = true;
+                btnUpdateFilm.Visible = false;
+            }
+            else
+            {
+                btnSaveFilm.Visible = false;
+                btnUpdateFilm.Visible = true;
+            }
+        }
+
+        private void DisableSelect()
+        {
+            dGVFilm.Enabled = false;
+        }
+
+        private void btnUpdateFilm_Click(object sender, EventArgs e)
+        {
+            if (dGVFilm.SelectedRows.Count > 0)
+            {
+                var item = dGVFilm.SelectedRows[0].Cells;
+                int id = int.Parse(item[0].Value.ToString());
+                editId = id;
+                UpdateTextBoxes(id);
+                ToggleSaveUpdate();
+                DisableSelect();
+            }
+        }
+        private Film GetEditedFilm()
+        {
+            Film film = new Film();
+            film.Id = editId;
+
+            string title = txtTitle.Text;
+            string director = txtDirectorF.Text;
+            string dateOfReleasing = txtDateOfReleasingF.Text;
+            double rating = 0;
+            double.TryParse(txtRatingF.Text, out rating);
+            int filmGenreId = 0;
+            int.TryParse(txtGenreIdF.Text, out filmGenreId);
+
+            film.Title = title;
+            film.FilmDirector = director;
+            film.DateOfReleasing = dateOfReleasing;
+            film.Rating = rating;
+            film.GenreID = filmGenreId;
+
+            return film;
+        }
+
+        private void ResetSelect()
+        {
+            dGVFilm.ClearSelection();
+            dGVFilm.Enabled = true;
+        }
+
+        private void btnSaveFilm_Click(object sender, EventArgs e)
+        {
+            Film editedFilm = GetEditedFilm();
+            filmController.Update(editedFilm);
+            UpdateGrid();
+            ResetSelect();
+            ToggleSaveUpdate();
+        }
+
+        private void btnDeleteFilm_Click(object sender, EventArgs e)
+        {
+            if (dGVFilm.SelectedRows.Count > 0)
+            {
+                var item = dGVFilm.SelectedRows[0].Cells;
+                int id = int.Parse(item[0].Value.ToString());
+                filmController.Delete(id);
+                UpdateGrid();
+                ResetSelect();
+            }
+        }
     }
 }
