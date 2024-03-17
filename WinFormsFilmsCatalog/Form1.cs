@@ -167,11 +167,11 @@ namespace WinFormsFilmsCatalog
         {
             Film filmOne = new Film("Spider-Man: No Way Home", "Jon Watts", "12/17/2021", 8.2, 1);
             filmController.Add(filmOne);
-            Film filmTwo = new Film("Anyone But You", "Will Gluck", "12/22/2023", 6.3, 9);
+            Film filmTwo = new Film("Anyone But You", "Will Gluck", "12/22/2023", 6.3, 2);
             filmController.Add(filmTwo);
             Film filmThree = new Film("Madame Web", "S.J.Glarkson", "2/14/2024", 3.7, 1);
             filmController.Add(filmThree);
-            Film filmFour = new Film("Last Call", "Ivaylo Penchev", "6/4/2021", 7.8, 9);
+            Film filmFour = new Film("Last Call", "Ivaylo Penchev", "6/4/2021", 7.8, 2);
             filmController.Add(filmFour);
             Film filmFive = new Film("Guardians of the Galaxy Vol. 3", "James Gunn", "5/5/2023", 7.9, 1);
             filmController.Add(filmFive);
