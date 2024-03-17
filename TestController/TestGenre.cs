@@ -17,7 +17,7 @@ namespace TestController
             var result = controller.GetAll();
 
             // Assert
-            Assert.AreEqual(9, result.Count); // Assuming there are 8 genres in the test data
+            Assert.AreEqual(10, result.Count); // Assuming there are 8 genres in the test data
         }
 
         [Test]
@@ -41,10 +41,12 @@ namespace TestController
             // Arrange
             GenreController controller = new GenreController();
             Genre newgenre = new Genre("genreTest");
+            Genre test = new Genre("Test");
             Genre newgenre2 = new Genre("genreTest2");
 
             // Act
             controller.Add(newgenre);
+            controller.Add(test);
             controller.Add(newgenre2);
             int id = controller.GetByName(newgenre.Name);
             var result = controller.Get(id);

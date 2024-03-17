@@ -175,7 +175,7 @@ namespace TestController
             GenreController genreController = new GenreController();
             FilmController filmController = new FilmController();
             // Arrange
-            int id = genreController.GetByName("Updated GenreTest");
+            int id = genreController.GetByName("sci-fi");
             Film film1 = new Film("FilmTest", "Director1", "25/10/06", 4, id);
             Film film2 = new Film("FilmTest2", "Director2", "25/10/06", 3, id);
             filmController.Add((Film)film1);
