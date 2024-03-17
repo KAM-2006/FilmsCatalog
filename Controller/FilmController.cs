@@ -38,6 +38,15 @@
             }
         }
 
+        public void AddActorFilm(FilmActor filmActor)
+        {
+            using (filmsDbContext = new FilmsDbContext())
+            {
+                filmsDbContext.FilmsActors.Add(filmActor);
+                filmsDbContext.SaveChanges();
+            }
+        }
+
         public void Update(Film film)
         {
             using (filmsDbContext = new FilmsDbContext())
