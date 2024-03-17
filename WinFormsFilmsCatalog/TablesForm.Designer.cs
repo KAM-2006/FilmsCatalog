@@ -518,6 +518,7 @@
             this.btnInsertActor.TabIndex = 42;
             this.btnInsertActor.Text = "Insert";
             this.btnInsertActor.UseVisualStyleBackColor = true;
+            this.btnInsertActor.Click += new System.EventHandler(this.btnInsertActor_Click);
             // 
             // btnSaveFilm
             // 
@@ -558,6 +559,7 @@
             this.btnSaveActor.TabIndex = 46;
             this.btnSaveActor.Text = "Save";
             this.btnSaveActor.UseVisualStyleBackColor = true;
+            this.btnSaveActor.Click += new System.EventHandler(this.btnSaveActor_Click);
             // 
             // btnDeleteActor
             // 
@@ -568,6 +570,7 @@
             this.btnDeleteActor.TabIndex = 47;
             this.btnDeleteActor.Text = "Delete";
             this.btnDeleteActor.UseVisualStyleBackColor = true;
+            this.btnDeleteActor.Click += new System.EventHandler(this.btnDeleteActor_Click);
             // 
             // btnUpdateActor
             // 
@@ -578,6 +581,7 @@
             this.btnUpdateActor.TabIndex = 48;
             this.btnUpdateActor.Text = "Update";
             this.btnUpdateActor.UseVisualStyleBackColor = true;
+            this.btnUpdateActor.Click += new System.EventHandler(this.btnUpdateActor_Click);
             // 
             // dGVFilm
             // 
